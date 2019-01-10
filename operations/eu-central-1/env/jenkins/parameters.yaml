@@ -1,6 +1,14 @@
+# GIT repositories configuration:
 gitUsername: ''
 gitApiToken: ''
 gitProviderUrl: 'https://CC.XX.ZZZ/bitbucket/'
 gitBitbucketServer: 'https://XX.CCVVV'
+
+# Jenkins-x configuration:
 defaultAdminPassword: 'qwerty'
-jxDomain: 'XXX.ZZZ.CCC'
+
+# DNS configuration:
+## R53 Hosted Zone ID for domain that will be used by jenkins-x:
+jxDomainHostedZoneID: 'AAAAAAAAAAAAAA'
+## Prefix (string) for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
+jxDomainAliasPrefix: 'abc'
