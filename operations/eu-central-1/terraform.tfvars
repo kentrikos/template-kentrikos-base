@@ -53,3 +53,7 @@ product_domain_name = "demo" # Name of product domain, will be used to create ot
 region = "eu-central-1" # AWS region
 
 vpc_id = "vpc-XXXXXX" # ID of existing VPC (must be pre-created)
+
+jenkins_dns_domain_hosted_zone_ID = "ABCDEFGHIJKLMN" # R53 Hosted Zone ID for domain that will be used by Jenkins master
+
+jenkins_dns_hostname = "jenkins" # Local part of FQDN for Jenkins master

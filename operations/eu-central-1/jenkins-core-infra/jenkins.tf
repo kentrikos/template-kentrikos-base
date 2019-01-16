@@ -13,6 +13,9 @@ module "jenkins" {
   http_proxy              = "${var.http_proxy}"
   jenkins_proxy_http_port = "${var.http_proxy_port}"
 
+  jenkins_dns_domain_hosted_zone_ID = "${var.jenkins_dns_domain_hosted_zone_ID}"
+  jenkins_dns_hostname              = "${var.jenkins_dns_hostname}"
+
   ssh_allowed_cidrs  = "${var.jenkins_ssh_allowed_cidrs}"
   http_allowed_cidrs = "${var.jenkins_http_allowed_cidrs}"
 
