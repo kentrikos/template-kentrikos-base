@@ -1,5 +1,5 @@
 module "application_iam" {
-  source = "github.com/kentrikos/terraform-aws-iam-generator//application?ref=multi_deployment"
+  source = "github.com/kentrikos/terraform-aws-iam-generator//application"
 
   region              = "${var.region}"
   product_domain_name = "${var.product_domain_name}"
