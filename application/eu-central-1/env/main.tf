@@ -12,6 +12,7 @@ module "application" {
   k8s_node_count           = "${var.k8s_node_count}"
   k8s_master_instance_type = "${var.k8s_master_instance_type}"
   k8s_node_instance_type   = "${var.k8s_node_instance_type}"
+  k8s_aws_ssh_keypair_name = "${var.k8s_aws_ssh_keypair_name}"
 
   iam_cross_account_role_arn    = "${var.iam_cross_account_role_arn}"
   k8s_masters_iam_policies_arns = "${var.k8s_masters_iam_policies_arns}"

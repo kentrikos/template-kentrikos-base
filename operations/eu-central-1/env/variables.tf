@@ -31,3 +31,5 @@ variable "k8s_masters_iam_policies_arns" {
 variable "k8s_nodes_iam_policies_arns" {
   type = "list"
 }
+
+variable "k8s_aws_ssh_keypair_name" {}
