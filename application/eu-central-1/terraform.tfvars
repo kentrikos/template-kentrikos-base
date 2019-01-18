@@ -31,6 +31,8 @@ k8s_nodes_iam_policies_arns = [
 
 k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"] # List of private subnets (matching AZs) where to deploy the cluster (required if existing VPC is used)
 
+k8s_aws_ssh_keypair_name = "" # Optional name of existing SSH keypair on AWS account, to be used for cluster instances (will be generated if not specified)
+
 logs_not_resource = [] # List of resources that log police will use for NotResource, empty means that Resource * is set
 
 operations_aws_account_number = "123456789012" # AWS operations account number (without hyphens)
