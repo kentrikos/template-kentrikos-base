@@ -1,5 +1,5 @@
 ###############################################################################
-# Applications account configuration
+# Application account configuration
 ###############################################################################
 
 # AWS account id of your application account. This account will contain your
@@ -90,7 +90,7 @@ product_domain_name = "demo"
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
 # Parameters to configure the network for your deployment. Enter the target AWS
-# region, availablility zones an existing VPC ID (for operations account only
+# region, availability zones an existing VPC ID (for operations account only
 # existing VPCs are accepted).
 # Example:
 # region = "eu-central-1"
@@ -149,8 +149,10 @@ k8s_nodes_iam_policies_arns = [
 k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 
 # Instance types for Kubernetes Master Nodes , Kubernetes Worker Nodes and
-# amount of Kubernetes Worker Nodes. Valid instance types are all types which
-# are available in the target region for Linux operating systems. Examples:
+# amount of Kubernetes Worker Nodes.
+# IMPORTANT NOTE Please check if chosen instance types are available in the
+# target region for Linux operating systems.
+# Examples:
 # k8s_master_instance_type = "m4.large"
 # k8s_node_instance_type = "m4.large"
 # k8s_node_count = "3"
