@@ -1,5 +1,5 @@
 ###############################################################################
-# Applications account configuration
+# Application account configuration
 ###############################################################################
 
 # AWS account id of your application account. This account will contain your
@@ -100,7 +100,7 @@ product_domain_name = "demo"
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
 # Parameters to configure the network for your deployment. Enter the target AWS
-# region, availablility zones an existing VPC ID (for operations account only
+# region, availability zones an existing VPC ID (for operations account only
 # existing VPCs are accepted).
 # Example:
 # region = "eu-central-1"
@@ -154,7 +154,7 @@ jenkins_subnet_id = "subnet-ZXC"
 
 # CIDRs to configure the security group for Jenkins to allow http (port 8080)
 # and ssh (port 22) access. Provide a list of valid CIDRs like
-# ["10.2.0.0/16","10.2.0.0/16"]. Example:
+# ["10.2.0.0/16","10.10.0.0/24"]. Example:
 # jenkins_http_allowed_cidrs = ["10.0.0.0/8"]
 # jenkins_ssh_allowed_cidrs = ["10.0.0.0/8"]
 
@@ -189,12 +189,12 @@ k8s_masters_iam_policies_arns = [
 # List of existing IAM policies that will be attached to instance profile for
 # worker nodes (EC2 instances): Example:
 # k8s_nodes_iam_policies_arns = [
-#   "arn:aws:iam::123456789012:policy/nnodes.mpas-demo-ops.k8s.local",
+#   "arn:aws:iam::123456789012:policy/nnodes.maps-demo-ops.k8s.local",
 #   "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/nnodes.mpas-demo-ops.k8s.local",
+  "arn:aws:iam::123456789012:policy/nodes.maps-demo-ops.k8s.local",
   "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
 ]
 
@@ -210,8 +210,10 @@ k8s_nodes_iam_policies_arns = [
 k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 
 # Instance types for Kubernetes Master Nodes , Kubernetes Worker Nodes and
-# amount of Kubernetes Worker Nodes. Valid instance types are all types which
-# are available in the target region for Linux operating systems. Examples:
+# amount of Kubernetes Worker Nodes.
+# IMPORTANT NOTE Please check if chosen instance types are available in the
+# target region for Linux operating systems.
+# Examples:
 # k8s_master_instance_type = "m4.large"
 # k8s_node_instance_type = "m4.large"
 # k8s_node_count = "3"
