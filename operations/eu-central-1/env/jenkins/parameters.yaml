@@ -1,6 +1,43 @@
+###############################################################################
+# JenkinsX configuration parameters
+###############################################################################
+
+# This section is used by JenkinsX to import application jobs from Bitbucket
+# repository.
+# IMPORTANT NOTE - This section is mandatory, however it will be used only with
+# application deployed by JenkinsX.
+
+# Below parameters can be taken from Bitbucket settings section:
+# Repo username with assigned token to access repository
 gitUsername: ''
 gitApiToken: ''
-gitProviderUrl: 'https://CC.XX.ZZZ/bitbucket/'
-gitBitbucketServer: 'https://XX.CCVVV'
+
+# Provider Url is used to handle API Calls
+# Example:
+# gitProviderUrl: 'https://myorganization.com/bitbucket/'
+gitProviderUrl: ''
+
+# Bitbucket repository address
+# Example:
+# gitBitbucketServer: 'https://git.myorganization.com/'
+gitBitbucketServer: ''
+
+
+# Default password to access JenkinsX dashboard
+# Example:
+# defaultAdminPassword: 'qwerty'
 defaultAdminPassword: 'qwerty'
-jxDomain: 'XXX.ZZZ.CCC'
+
+# Legacy parameter, it will be generated automatically
+# Example:
+# jxDomain: 'demoapp.myorganization.com'
+jxDomain: ''
+
+# HostedZoneID is an AWS Route53 parameter to store Domain for Jx
+jxDomainHostedZoneID: ''
+
+# DomainAliasPrefix is a prefix, which is added to your domain to generate url
+# address to access JenkinsX dashboard
+# Example:
+# jxDomainAliasPrefix: 'demoapp'
+jxDomainAliasPrefix: 'demoapp'
