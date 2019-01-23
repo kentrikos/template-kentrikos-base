@@ -28,11 +28,6 @@ gitBitbucketServer: ''
 # defaultAdminPassword: 'qwerty'
 defaultAdminPassword: 'qwerty'
 
-# Legacy parameter, it will be generated automatically
-# Example:
-# jxDomain: 'demoapp.myorganization.com'
-jxDomain: ''
-
 # HostedZoneID is an AWS Route53 parameter to store Domain for Jx
 jxDomainHostedZoneID: ''
 
