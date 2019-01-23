@@ -22,7 +22,6 @@ gitProviderUrl: ''
 # gitBitbucketServer: 'https://git.myorganization.com/'
 gitBitbucketServer: ''
 
-
 # Default password to access JenkinsX dashboard
 # Example:
 # defaultAdminPassword: 'qwerty'
