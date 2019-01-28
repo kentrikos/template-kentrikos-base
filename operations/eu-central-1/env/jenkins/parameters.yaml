@@ -27,11 +27,10 @@ gitBitbucketServer: ''
 # defaultAdminPassword: 'qwerty'
 defaultAdminPassword: 'qwerty'
 
-# HostedZoneID is an AWS Route53 parameter to store Domain for Jx
+# jxHostedZoneID is an AWS Route53 parameter to store Domain for Jx
 jxDomainHostedZoneID: ''
 
-# DomainAliasPrefix is a prefix, which is added to your domain to generate url
-# address to access JenkinsX dashboard
+# jxDomainAliasPrefix is a string for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
 # Example:
 # jxDomainAliasPrefix: 'demoapp'
 jxDomainAliasPrefix: 'demoapp'
