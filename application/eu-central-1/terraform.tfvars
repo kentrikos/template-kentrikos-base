@@ -90,7 +90,7 @@ product_domain_name = "demo"
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
 # Parameters to configure the network for your deployment. Enter the target AWS
-# region, availability zones an existing VPC ID (for operations account only
+# region, availability zones and existing VPC ID (for operations account only
 # existing VPCs are accepted).
 # Example:
 # region = "eu-central-1"
@@ -101,7 +101,7 @@ region = "eu-central-1"
 azs = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
 vpc_id = "vpc-XXXXXX"
 
-# Proxy settings to use for internet access. Enter the proxy address (incl.
+# Proxy settings to use for Internet access. Enter the proxy address (incl.
 # authentication information if needed) and proxy port (without quotation
 # marks). Example:
 # http_proxy = "http://domain\username:password@proxyaddress:port"
@@ -161,10 +161,10 @@ k8s_master_instance_type = "m4.large"
 k8s_node_instance_type = "m4.large"
 k8s_node_count = "3"
 
-# Optional name of existing SSH keypair on AWS account, to be used for cluster 
+# Optional name of existing SSH keypair on AWS account, to be used for cluster
 # instances (will be generated if not specified)
 
-k8s_aws_ssh_keypair_name = "" 
+k8s_aws_ssh_keypair_name = ""
 
 ###############################################################################
 # Operations account configuration
