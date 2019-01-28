@@ -166,6 +166,19 @@ jenkins_ssh_allowed_cidrs = ["10.0.0.0/8"]
 
 jenkins_ec2_instance_type = "t3.medium"
 
+# AWS Route53 Hosted Zone ID for domain that will be used by Jenkins master
+# Example:
+# jenkins_dns_domain_hosted_zone_ID = "ABCDEFGHIJKLMN"
+
+jenkins_dns_domain_hosted_zone_ID = ""
+
+# This parameter is a prefix for wildcard alias that will be created for jenkins
+# Example:
+# jenkins_dns_hostname = "jenkins" 
+# and as result will be jenkins address - jenkins.myorganization.domain.com
+
+jenkins_dns_hostname = "jenkins" 
+
 ###############################################################################
 # Kubernetes Cluster Configuration in Operations account
 ###############################################################################
