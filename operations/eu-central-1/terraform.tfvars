@@ -221,3 +221,8 @@ k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 k8s_master_instance_type = "m4.large"
 k8s_node_instance_type = "m4.large"
 k8s_node_count = "3"
+
+# Optional name of existing SSH keypair on AWS account, to be used for cluster 
+# instances (will be generated if not specified)
+
+k8s_aws_ssh_keypair_name = "" 
