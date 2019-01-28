@@ -9,7 +9,12 @@
 
 # Below parameters can be taken from Bitbucket settings section:
 # Repo username with assigned token to access repository
+# Example:
+# gitUsername: 'mygitusername'
+# gitApiToken: '55b8bfdc5c74833fb125140a45a7e4786b11ba7f '
+
 gitUsername: ''
+gitApiToken: ''
 gitApiToken: ''
 
 # Provider Url is used to handle API Calls
