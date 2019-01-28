@@ -180,3 +180,22 @@ operations_aws_account_number = "123456789012"
 # iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
 
 iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
+
+###############################################################################
+# Jenkins configuration parameters
+###############################################################################
+
+
+# AWS Route53 Hosted Zone ID for domain that will be used by Jenkins master
+# Example:
+# jenkins_dns_domain_hosted_zone_ID = "ABCDEFGHIJKLMN"
+
+jenkins_dns_domain_hosted_zone_ID = ""
+
+# Local part of FQDN for Jenkins master
+# This parameter is a prefix for wildcard alias that will be created for jenkins
+# Example:
+# jenkins_dns_hostname = "jenkins" 
+# and as result will be jenkins address - jenkins.myorganization.domain.com
+
+jenkins_dns_hostname = "" 
