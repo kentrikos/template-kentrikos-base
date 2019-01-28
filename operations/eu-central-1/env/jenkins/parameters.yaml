@@ -9,7 +9,12 @@
 
 # Below parameters can be taken from Bitbucket settings section:
 # Repo username with assigned token to access repository
+# Example:
+# gitUsername: 'mygitusername'
+# gitApiToken: '55b8bfdc5c74833fb125140a45a7e4786b11ba7f '
+
 gitUsername: ''
+gitApiToken: ''
 gitApiToken: ''
 
 # Provider Url is used to handle API Calls
@@ -28,6 +33,9 @@ gitBitbucketServer: ''
 defaultAdminPassword: 'qwerty'
 
 # jxHostedZoneID is an AWS Route53 parameter to store Domain for Jx
+# Example:
+# jxDomainHostedZoneID: 'Z9NMCFPV6TPZZR'
+
 jxDomainHostedZoneID: ''
 
 # jxDomainAliasPrefix is a string for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
