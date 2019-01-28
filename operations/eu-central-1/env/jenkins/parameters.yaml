@@ -1,14 +1,44 @@
-# GIT repositories configuration:
+###############################################################################
+# JenkinsX configuration parameters
+###############################################################################
+
+# This section is used by JenkinsX to import application jobs from Bitbucket
+# repository.
+# IMPORTANT NOTE - This section is mandatory, however it will be used only with
+# application deployed by JenkinsX.
+
+# Below parameters can be taken from Bitbucket settings section:
+# Repo username with assigned token to access repository
+# Example:
+# gitUsername: 'mygitusername'
+# gitApiToken: '55b8bfdc5c74833fb125140a45a7e4786b11ba7f '
+
 gitUsername: ''
 gitApiToken: ''
-gitProviderUrl: 'https://CC.XX.ZZZ/bitbucket/'
-gitBitbucketServer: 'https://XX.CCVVV'
+gitApiToken: ''
 
-# Jenkins-x configuration:
+# Provider Url is used to handle API Calls
+# Example:
+# gitProviderUrl: 'https://myorganization.com/bitbucket/'
+gitProviderUrl: ''
+
+# Bitbucket repository address
+# Example:
+# gitBitbucketServer: 'https://git.myorganization.com/'
+gitBitbucketServer: ''
+
+# Default password to access JenkinsX dashboard
+# Example:
+# defaultAdminPassword: 'qwerty'
 defaultAdminPassword: 'qwerty'
 
-# DNS configuration:
-## R53 Hosted Zone ID for domain that will be used by jenkins-x:
-jxDomainHostedZoneID: 'AAAAAAAAAAAAAA'
-## Prefix (string) for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
-jxDomainAliasPrefix: 'abc'
+# jxHostedZoneID is an AWS Route53 parameter to store Domain for Jx
+# Example:
+# jxDomainHostedZoneID: 'Z9NMCFPV6TPZZR'
+
+jxDomainHostedZoneID: ''
+
+# jxDomainAliasPrefix is a string for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
+# Example:
+# jxDomainAliasPrefix: 'demoapp'
+jxDomainAliasPrefix: 'demoapp'
