@@ -31,3 +31,5 @@ variable "k8s_master_instance_type" {}
 variable "k8s_node_instance_type" {}
 
 variable "k8s_aws_ssh_keypair_name" {}
+
+variable "k8s_linux_distro" {}
