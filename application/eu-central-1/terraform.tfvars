@@ -85,6 +85,7 @@ logs_not_resource = []
 # product_domain_name = "demo"
 
 environment_type = "test"
+
 product_domain_name = "demo"
 
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
@@ -98,7 +99,9 @@ product_domain_name = "demo"
 # vpc_id = "vpc-abcdefg0123456789"
 
 region = "eu-central-1"
+
 azs = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+
 vpc_id = "vpc-XXXXXX"
 
 # Proxy settings to use for Internet access. Enter the proxy address (incl.
@@ -108,33 +111,38 @@ vpc_id = "vpc-XXXXXX"
 # http_proxy_port = 8080
 
 http_proxy = ""
+
 http_proxy_port = 8080
 
 ###############################################################################
 # Kubernetes Cluster Configuration in Applications account
 ###############################################################################
 
-
 # List of existing IAM policies that will be attached to instance profile for
-# master nodes (EC2 instances). Example:
+# master nodes (EC2 instances).
+# Schema: arn:aws:iam::{application_aws_account_number}:policy/masters.{region}-{product_domain_name}-{environment_type}.k8s.local
+#         arn:aws:iam::{application_aws_account_number}:policy/masters_extra.{region}-{product_domain_name}-{environment_type}.k8s.local
+# Example:
 # k8s_masters_iam_policies_arns = [
-#   "arn:aws:iam::210987654321:policy/masters.demo-test.k8s.local",
-#   "arn:aws:iam::210987654321:policy/masters_extra.demo-test.k8s.local",
+#   "arn:aws:iam::210987654321:policy/masters.eu-central-1-demo-test.k8s.local",
+#   "arn:aws:iam::210987654321:policy/masters_extra.eu-central-1-demo-test.k8s.local",
 # ]
 
 k8s_masters_iam_policies_arns = [
-  "arn:aws:iam::210987654321:policy/masters.demo-test.k8s.local",
-  "arn:aws:iam::210987654321:policy/masters_extra.demo-test.k8s.local",
+  "arn:aws:iam::210987654321:policy/masters.eu-central-1-demo-test.k8s.local",
+  "arn:aws:iam::210987654321:policy/masters_extra.eu-central-1-demo-test.k8s.local",
 ]
 
 # List of existing IAM policies that will be attached to instance profile for
-# worker nodes (EC2 instances): Example:
+# worker nodes (EC2 instances):
+# Schema: arn:aws:iam::{application_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}.k8s.local
+# Example:
 # k8s_nodes_iam_policies_arns = [
-#   "arn:aws:iam::210987654321:policy/nodes.demo-test.k8s.local",
+#   "arn:aws:iam::210987654321:policy/nodes.eu-central-1-demo-test.k8s.local",
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::210987654321:policy/nodes.demo-test.k8s.local",
+  "arn:aws:iam::210987654321:policy/nodes.eu-central-1-demo-test.k8s.local",
 ]
 
 # IMPORTANT NOTE: The list of (private) subnets must match the param "azs" from
@@ -158,7 +166,9 @@ k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 # k8s_node_count = "3"
 
 k8s_master_instance_type = "m4.large"
+
 k8s_node_instance_type = "m4.large"
+
 k8s_node_count = "3"
 
 # Optional name of existing SSH keypair on AWS account, to be used for cluster
@@ -176,7 +186,15 @@ k8s_aws_ssh_keypair_name = ""
 
 operations_aws_account_number = "123456789012"
 
-# Cross-account role to assume before deploying the cluster. Example:
+# Cross-account role to assume before deploying the cluster.
+# For  auto_IAM_mode = false
+# Example:
 # iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
+# For auto_IAM_mode = true
+# Schema:  arn:aws:iam::{application_aws_account_number}:role/KENTRIKOS_{region}_{product_domain_name}_{environment_type}_CrossAccount
+# Example: arn:aws:iam::210987654321:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
 
-iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
+iam_cross_account_role_arn = "arn:aws:iam::c:role/KopsCrossAccount"
+
+# iam_cross_account_role_arn = "arn:aws:iam::central:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
+

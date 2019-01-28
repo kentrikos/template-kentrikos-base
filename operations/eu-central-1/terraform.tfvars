@@ -95,6 +95,7 @@ logs_not_resource = []
 # product_domain_name = "demo"
 
 environment_type = "test"
+
 product_domain_name = "demo"
 
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
@@ -108,7 +109,9 @@ product_domain_name = "demo"
 # vpc_id = "vpc-abcdefg0123456789"
 
 region = "eu-central-1"
+
 azs = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+
 vpc_id = "vpc-XXXXXX"
 
 # Proxy settings to use for Internet access. Enter the proxy address (incl.
@@ -118,6 +121,7 @@ vpc_id = "vpc-XXXXXX"
 # http_proxy_port = 8080
 
 http_proxy = ""
+
 http_proxy_port = 8080
 
 ###############################################################################
@@ -159,6 +163,7 @@ jenkins_subnet_id = "subnet-ZXC"
 # jenkins_ssh_allowed_cidrs = ["10.0.0.0/8"]
 
 jenkins_http_allowed_cidrs = ["10.0.0.0/8"]
+
 jenkins_ssh_allowed_cidrs = ["10.0.0.0/8"]
 
 # Instance type for Core Infra Jenkins Master. Valid instance types are all
@@ -188,27 +193,34 @@ jenkins_dns_hostname = "jenkins"
 k8s_cluster_name_postfix = "k8s.local"
 
 # List of existing IAM policies that will be attached to instance profile for
-# master nodes (EC2 instances). Example:
+# master nodes (EC2 instances).
+# Schema: arn:aws:iam::{operations_aws_account_number}:policy/masters.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
+#         arn:aws:iam::{operations_aws_account_number}:policy/masters_extra.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
+# Example:
 # k8s_masters_iam_policies_arns = [
-#   "arn:aws:iam::123456789012:policy/masters.demo-test-ops.k8s.local",
-#   "arn:aws:iam::123456789012:policy/masters_extra.demo-test-ops.k8s.local",
+#   "arn:aws:iam::123456789012:policy/masters.eu-central-1-demo-test-ops.k8s.local",
+#   "arn:aws:iam::123456789012:policy/masters_extra.eu-central-1-demo-test-ops.k8s.local",
 # ]
 
 k8s_masters_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/masters.demo-test-ops.k8s.local",
-  "arn:aws:iam::123456789012:policy/masters_extra.demo-test-ops.k8s.local",
+  "arn:aws:iam::123456789012:policy/masters.eu-central-1-demo-test-ops.k8s.local",
+  "arn:aws:iam::123456789012:policy/masters_extra.eu-central-1-demo-test-ops.k8s.local",
 ]
 
 # List of existing IAM policies that will be attached to instance profile for
-# worker nodes (EC2 instances): Example:
+# worker nodes (EC2 instances):
+# Schema:
+#   arn:aws:iam::{application_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
+#   arn:aws:iam::{application_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
+# Example:
 # k8s_nodes_iam_policies_arns = [
-#   "arn:aws:iam::123456789012:policy/nnodes.maps-demo-ops.k8s.local",
+#   "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test.k8s-ops.local",
 #   "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/nodes.maps-demo-ops.k8s.local",
-  "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
+  "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test.k8s-ops.local",
+  "arn:aws:iam::123456789012:policy/KENTRIKOS_eu-central.demo-test_AssumeCrossAccount",
 ]
 
 # IMPORTANT NOTE: The list of (private) subnets must match the param "azs" from
@@ -232,7 +244,9 @@ k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 # k8s_node_count = "3"
 
 k8s_master_instance_type = "m4.large"
+
 k8s_node_instance_type = "m4.large"
+
 k8s_node_count = "3"
 
 # Optional name of existing SSH keypair on AWS account, to be used for cluster
