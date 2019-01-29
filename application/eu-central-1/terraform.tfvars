@@ -168,7 +168,7 @@ k8s_aws_ssh_keypair_name = ""
 
 # Linux distribution for K8s cluster instances (supported values: debian, amzn2)
 
-k8s_linux_distro = "amzn2"
+k8s_linux_distro = "debian"
 
 ###############################################################################
 # Operations account configuration
