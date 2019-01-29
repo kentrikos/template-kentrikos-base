@@ -33,3 +33,5 @@ variable "k8s_nodes_iam_policies_arns" {
 }
 
 variable "k8s_aws_ssh_keypair_name" {}
+
+variable "k8s_linux_distro" {}
