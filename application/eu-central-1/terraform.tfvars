@@ -194,7 +194,7 @@ operations_aws_account_number = "123456789012"
 # Schema:  arn:aws:iam::{application_aws_account_number}:role/KENTRIKOS_{region}_{product_domain_name}_{environment_type}_CrossAccount
 # Example: arn:aws:iam::210987654321:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
 
-iam_cross_account_role_arn = "arn:aws:iam::c:role/KopsCrossAccount"
+iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
 
-# iam_cross_account_role_arn = "arn:aws:iam::central:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
+# iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
 
