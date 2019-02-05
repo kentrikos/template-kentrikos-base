@@ -176,6 +176,12 @@ k8s_node_count = "3"
 
 k8s_aws_ssh_keypair_name = ""
 
+# Linux distribution for K8s cluster instances (supported values: debian, amzn2)
+# Example:
+# k8s_linux_distro = "debian"
+
+k8s_linux_distro = "debian"
+
 ###############################################################################
 # Operations account configuration
 ###############################################################################
