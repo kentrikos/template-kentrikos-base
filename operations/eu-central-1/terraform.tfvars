@@ -214,12 +214,12 @@ k8s_masters_iam_policies_arns = [
 #   arn:aws:iam::{application_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
 # Example:
 # k8s_nodes_iam_policies_arns = [
-#   "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test.k8s-ops.local",
+#   "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test-ops.k8s.local",
 #   "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test.k8s-ops.local",
+  "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test-ops.k8s.local",
   "arn:aws:iam::123456789012:policy/KENTRIKOS_eu-central.demo-test_AssumeCrossAccount",
 ]
 
