@@ -210,8 +210,8 @@ k8s_masters_iam_policies_arns = [
 # List of existing IAM policies that will be attached to instance profile for
 # worker nodes (EC2 instances):
 # Schema:
-#   arn:aws:iam::{application_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
-#   arn:aws:iam::{application_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
+#   arn:aws:iam::{operations_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
+#   arn:aws:iam::{operations_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
 # Example:
 # k8s_nodes_iam_policies_arns = [
 #   "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test-ops.k8s.local",
