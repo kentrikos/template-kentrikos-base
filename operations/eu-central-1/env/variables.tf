@@ -2,6 +2,8 @@ variable "product_domain_name" {}
 
 variable "environment_type" {}
 
+variable "operations_aws_account_number" {}
+
 variable "k8s_private_subnets" {
   type = "list"
 }

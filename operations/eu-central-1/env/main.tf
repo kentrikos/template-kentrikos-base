@@ -4,6 +4,8 @@ module "operations" {
   product_domain_name = "${var.product_domain_name}"
   environment_type    = "${var.environment_type}"
 
+  operations_aws_account_number = "${var.operations_aws_account_number}"
+
   k8s_private_subnets = "${var.k8s_private_subnets}"
   azs                 = "${var.azs}"
   vpc_id              = "${var.vpc_id}"
