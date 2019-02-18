@@ -193,7 +193,7 @@ k8s_linux_distro = "debian"
 operations_aws_account_number = "123456789012"
 
 # Cross-account role to assume before deploying the cluster.
-# For  auto_IAM_mode = false
+# For auto_IAM_mode = false
 # Example:
 # iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
 # For auto_IAM_mode = true
