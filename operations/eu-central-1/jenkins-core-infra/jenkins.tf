@@ -1,5 +1,5 @@
 module "jenkins" {
-  source = "github.com/kentrikos/terraform-aws-bootstrap-jenkins?ref=0.1.0"
+  source = "github.com/kentrikos/terraform-aws-bootstrap-jenkins?ref=multi_deployment"
 
   operations_aws_account_number  = "${var.operations_aws_account_number}"
   application_aws_account_number = "${var.application_aws_account_number}"
@@ -24,4 +24,5 @@ module "jenkins" {
   iam_policy_names_prefix = "${var.jenkins_iam_policy_names_prefix}"
 
   auto_IAM_mode = "${var.auto_IAM_mode}"
+  region        = "${var.region}"
 }

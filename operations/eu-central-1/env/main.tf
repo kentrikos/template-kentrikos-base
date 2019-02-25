@@ -1,8 +1,10 @@
 module "operations" {
-  source = "github.com/kentrikos/terraform-aws-account-operations?ref=0.1.0"
+  source = "github.com/kentrikos/terraform-aws-account-operations?ref=multi_deployment"
 
   product_domain_name = "${var.product_domain_name}"
   environment_type    = "${var.environment_type}"
+
+  operations_aws_account_number = "${var.operations_aws_account_number}"
 
   k8s_private_subnets = "${var.k8s_private_subnets}"
   azs                 = "${var.azs}"
