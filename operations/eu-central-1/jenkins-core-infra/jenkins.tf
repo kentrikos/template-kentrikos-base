@@ -1,5 +1,5 @@
 module "jenkins" {
-  source = "github.com/kentrikos/terraform-aws-bootstrap-jenkins?ref=multi_deployment"
+  source = "github.com/kentrikos/terraform-aws-bootstrap-jenkins?ref=0.2.0"
 
   operations_aws_account_number  = "${var.operations_aws_account_number}"
   application_aws_account_number = "${var.application_aws_account_number}"
