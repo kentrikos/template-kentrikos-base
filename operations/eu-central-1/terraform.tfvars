@@ -215,7 +215,7 @@ k8s_masters_iam_policies_arns = [
 # Example:
 # k8s_nodes_iam_policies_arns = [
 #   "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test-ops.k8s.local",
-#   "arn:aws:iam::123456789012:policy/AssumeKopsCrossAccount",
+#   "arn:aws:iam::123456789012:policy/KENTRIKOS_eu-central.demo-test_AssumeCrossAccount",
 # ]
 
 k8s_nodes_iam_policies_arns = [
