@@ -107,7 +107,7 @@ vpc_id = "vpc-XXXXXX"
 # Proxy settings to use for Internet access. Enter the proxy address (incl.
 # authentication information if needed, without http(s):// prefix) and proxy
 # port (without quotation marks). Example:
-# http_proxy = "http://domain\username:password@proxyaddress:port"
+# http_proxy = "domain\username:password@proxyaddress:port"
 # http_proxy_port = 8080
 
 http_proxy = ""
