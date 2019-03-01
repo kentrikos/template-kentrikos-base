@@ -6,5 +6,6 @@ provider "aws" {
     role_arn = "${var.iam_cross_account_role_arn}"
   }
 
-  region = "${var.region}"
+  region  = "${var.region}"
+  version = "~> 1.60"
 }
