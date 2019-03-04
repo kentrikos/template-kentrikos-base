@@ -20,6 +20,8 @@ variable "http_proxy" {}
 
 variable "http_proxy_port" {}
 
+variable "no_proxy" {}
+
 variable "k8s_node_count" {}
 
 variable "k8s_master_instance_type" {}

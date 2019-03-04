@@ -1,5 +1,5 @@
 module "operations" {
-  source = "github.com/kentrikos/terraform-aws-account-operations?ref=0.2.0"
+  source = "github.com/kentrikos/terraform-aws-account-operations?ref=0.3.0"
 
   product_domain_name = "${var.product_domain_name}"
   environment_type    = "${var.environment_type}"
@@ -11,6 +11,7 @@ module "operations" {
   vpc_id              = "${var.vpc_id}"
   region              = "${var.region}"
   http_proxy          = "${var.http_proxy}:${var.http_proxy_port}"
+  no_proxy            = "${var.no_proxy}"
 
   k8s_node_count           = "${var.k8s_node_count}"
   k8s_master_instance_type = "${var.k8s_master_instance_type}"

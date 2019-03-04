@@ -119,10 +119,13 @@ vpc_id = "vpc-XXXXXX"
 # and proxy port (without quotation marks). Example:
 # http_proxy = "domain\username:password@proxyaddress"
 # http_proxy_port = 8080
+# no_proxy = "localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.169.254,.internal,.elb.us-east-1.amazonaws.com,.elb.amazonaws.com"
 
 http_proxy = ""
 
 http_proxy_port = 8080
+
+no_proxy = ""
 
 ###############################################################################
 # Core Infra Jenkins Configuration in Operations account
