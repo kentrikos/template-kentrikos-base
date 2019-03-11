@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2019-03-11
+## Changed
+- Updated `terraform-aws-bootstrap-jenkins` module to v0.3.1
+
 ## [0.3.0] - 2019-03-07
 ### Changed
 - Added input variable in operations for no_proxy configuration
