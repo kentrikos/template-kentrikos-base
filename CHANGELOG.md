@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Pin aws provider to version 1.60 due to incompatibility with 2.0.0, GH-16
 
+### Fixed
+- Pin aws provider to version 1.60 due to incompatibility with 2.0.0, GH-16
+
 ## [0.2.0] - 2019-02-25
 ### Backwards Incompatibilities / Notes
 - Changes in IAM policies in Application account for k8s
