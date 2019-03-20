@@ -262,3 +262,36 @@ k8s_aws_ssh_keypair_name = ""
 # k8s_linux_distro = "debian"
 
 k8s_linux_distro = "debian"
+
+# Enable horizontal pod autoscaling for the cluster.
+# Horizontal pod scaling is the scaling of pods withing the cluster.
+# Example:
+# k8s_enable_pod_autoscaling = true
+
+k8s_enable_pod_autoscaling = true
+
+# Enable cluster autoscaling on the cluster.
+# Cluster autoscaling is scaling of the cluster nodes (EC2 instances)
+# Example:
+# k8s_enable_cluster_autoscaling = true
+
+k8s_enable_cluster_autoscaling = true
+
+# Enable cluster scale in protection.
+# This will prevent instances from being terminated during a scale in.
+# Example:
+# k8s_protect_cluster_from_scale_in = true
+
+k8s_protect_cluster_from_scale_in = false
+
+# Enables the automatic installation of Helm in the cluster
+# Example:
+# k8s_install_helm = true
+
+k8s_install_helm = true
+
+# List of CIDR ranges that will be allowed SSH into cluster node instances.
+# Example:
+# k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
+
+k8s_allowed_worker_ssh_cidrs = []
