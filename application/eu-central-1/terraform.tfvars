@@ -156,6 +156,13 @@ k8s_nodes_iam_policies_arns = [
 
 k8s_private_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
 
+# Enter a list of target Subnet IDs of existing subnets where the Kubernetes
+# cluster will be deployed. Public subnets will be tagged to allow cluster ingress creation.
+# Example:
+# k8s_public_subnets = ["subnet-abcd1234", "subnet-defg5678", "subnet-hijk0912"]
+
+k8s_public_subnets = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
+
 # Instance types for Kubernetes Master Nodes , Kubernetes Worker Nodes and
 # amount of Kubernetes Worker Nodes.
 # IMPORTANT NOTE Please check if chosen instance types are available in the

@@ -6,6 +6,11 @@ variable "k8s_private_subnets" {
   type = "list"
 }
 
+variable "k8s_public_subnets" {
+  type    = "list"
+  default = []
+}
+
 variable "k8s_node_count" {}
 
 variable "region" {}

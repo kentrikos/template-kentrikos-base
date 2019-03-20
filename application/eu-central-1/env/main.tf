@@ -1,5 +1,5 @@
 module "application" {
-  source = "github.com/kentrikos/terraform-aws-account-application?ref=0.3.0"
+  source = "github.com/kentrikos/terraform-aws-account-application?ref=0.3.1"
 
   product_domain_name = "${var.product_domain_name}"
   environment_type    = "${var.environment_type}"
@@ -8,6 +8,7 @@ module "application" {
   azs                 = "${var.azs}"
   vpc_id              = "${var.vpc_id}"
   k8s_private_subnets = "${var.k8s_private_subnets}"
+  k8s_public_subnets  = "${var.k8s_public_subnets}"
 
   k8s_node_count           = "${var.k8s_node_count}"
   k8s_master_instance_type = "${var.k8s_master_instance_type}"
