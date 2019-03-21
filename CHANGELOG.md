@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.2] - 2019-03-20
+## Changed
+- Updated `terraform-aws-operations-account` module to v0.3.1
+- Updated `terraform-aws-application-account` module to v0.3.1
+## Added
+- Inputs to enable autoscaling features of deployed cluster
+- Input to enable helm installation
+- Input for cluster tagging on cluster (Application environment)
+
 ## [0.3.1] - 2019-03-11
 ## Changed
 - Updated `terraform-aws-bootstrap-jenkins` module to v0.3.1
