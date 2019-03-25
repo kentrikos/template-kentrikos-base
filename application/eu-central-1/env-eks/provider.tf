@@ -5,4 +5,5 @@
 provider "aws" {
   # assume_role {  #   role_arn = "${var.iam_cross_account_role_arn}"  # }
   version = "~> 1.60"
+  region  = "${var.region}"
 }

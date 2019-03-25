@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2019-03-25
+### Changed
+- Adjustments to config repo change
+   ```
+   operations/$REGION/env -> operations/$REGION/env-kops
+                          -> operations/$REGION/env-eks
+   
+   application/$REGION/env -> application/$REGION/env-kops
+                           -> application/$REGION/env-eks
+   ```
+- Pined new versions for modules
+
 ## [0.3.2] - 2019-03-20
 ## Changed
 - Updated `terraform-aws-operations-account` module to v0.3.1
