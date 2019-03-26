@@ -14,7 +14,9 @@ Files that need to be updated :
 
 * application/$REGION/terraform.tfvars
 * operations/$REGION/terraform.tfvars
-* operations/$REGION/env-kops/jenkins/parameters.yaml (configs for jx installation)
-* operations/$REGION/env-kops/grafana/parameters.yaml (configs for jx installation)
+* operations/$REGION/env-kops/jenkins/parameters.yaml (configs for jx and grafana installation)
+* operations/$REGION/env-kops/grafana/parameters.yaml (configs for jx and grafana installation)
+* operations/$REGION/env-eks/jenkins/parameters.yaml (configs for grafana installation)
+* operations/$REGION/env-eks/grafana/parameters.yaml (configs for grafana installation)
 
 To setup on another region change directories name or copy as new region name and update config files accordingly
