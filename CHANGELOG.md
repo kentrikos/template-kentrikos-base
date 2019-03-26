@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.4.0] - 2019-03-25
+## [0.4.0] - 2019-03-26
 ### Changed
 - Adjustments to config repo change
    ```
@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
                            -> application/$REGION/env-eks
    ```
 - Pined new versions for modules
+- Updated jenkins core module to 0.4.2 with fixed job names
 
 ## [0.3.2] - 2019-03-20
 ## Changed
