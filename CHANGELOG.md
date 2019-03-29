@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Added new parameter for R53 HostedZoneID
 
 ## [0.4.1] - 2019-03-26
 ### Fixed
@@ -24,16 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated jenkins core module to 0.4.2 with fixed job names
 
 ## [0.3.2] - 2019-03-20
-## Changed
+### Changed
 - Updated `terraform-aws-operations-account` module to v0.3.1
 - Updated `terraform-aws-application-account` module to v0.3.1
-## Added
+### Added
 - Inputs to enable autoscaling features of deployed cluster
 - Input to enable helm installation
 - Input for cluster tagging on cluster (Application environment)
 
 ## [0.3.1] - 2019-03-11
-## Changed
+### Changed
 - Updated `terraform-aws-bootstrap-jenkins` module to v0.3.1
 
 ## [0.3.0] - 2019-03-07

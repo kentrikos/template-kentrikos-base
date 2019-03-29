@@ -31,13 +31,28 @@ gitBitbucketServer: ''
 # defaultAdminPassword: 'qwerty'
 defaultAdminPassword: 'qwerty'
 
-# jxHostedZoneID is an AWS Route53 parameter to store Domain for Jx
+# domainHostedZoneID is an AWS Route53 parameter to store Domain used e.g. for LMA
+# Example:
+# domainHostedZoneID: 'Z9NMCFPV6TPZZR'
+
+domainHostedZoneID: ''
+
+# domainAliasPrefix is a string for wildcard alias that will be created (e.g. for LMA ingress)
+# Example:
+# domainAliasPrefix: 'demoapp'
+
+domainAliasPrefix: 'demoapp'
+
+# jxDomainHostedZoneID is an AWS Route53 parameter to store Domain for Jx
+# This is for backward compatibility with (experimental) jx support.
 # Example:
 # jxDomainHostedZoneID: 'Z9NMCFPV6TPZZR'
 
 jxDomainHostedZoneID: ''
 
 # jxDomainAliasPrefix is a string for wildcard alias that will be created (*.jxDomainAliasPrefix.DOMAIN)
+# This is for backward compatibility with (experimental) jx support.
 # Example:
 # jxDomainAliasPrefix: 'demoapp'
+
 jxDomainAliasPrefix: 'demoapp'
