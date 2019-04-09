@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.5.1] - 2019-04-08
+## [0.5.1] - 2019-04-09
 ### Added
 - Set Terraform AWS provider to v2.5.0 to support EKS module v2.3.1
+- Set link to higher version of account repo --> v0.3.2
 
 ## [0.5.0] - 2019-04-01
 ### Added
