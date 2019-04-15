@@ -6,11 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.6.0] - 2019-04-09
+## [0.6.0] - 2019-04-15
 ### Added
 - Set Terraform AWS provider to v2.5.0 to support EKS module v2.3.1
 - Set Terraform AWS provider to v2.5.0 to all modules
 - Set link to higher version of account repos --> v0.4.0
+
+### Changed
+- Updated jenkins core infra module to 0.6.0
 
 ## [0.5.0] - 2019-04-01
 ### Added
