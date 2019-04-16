@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.1] - 2019-04-16
+- Solved gp2 storage creation in EKS module
+
 ## [0.6.0] - 2019-04-09
 ### Added
 - Set Terraform AWS provider to v2.5.0 to support EKS module v2.3.1
