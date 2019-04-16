@@ -1,5 +1,5 @@
 module "operations" {
-  source = "github.com/kentrikos/terraform-aws-account-operations?ref=0.4.0"
+  source = "github.com/kentrikos/terraform-aws-account-operations?ref=0.4.1"
 
   product_domain_name = "${var.product_domain_name}"
   environment_type    = "${var.environment_type}"
