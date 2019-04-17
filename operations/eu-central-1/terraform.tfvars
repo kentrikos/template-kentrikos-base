@@ -6,7 +6,7 @@
 # (public) Kubernetes cluster and applications. Example:
 # application_aws_account_number = "210987654321"
 
-application_aws_account_number = "210987654321"
+application_aws_account_number = "XXX"
 
 ###############################################################################
 # Operations account configuration
@@ -16,7 +16,7 @@ application_aws_account_number = "210987654321"
 # (private) Kubernetes cluster and management tools on top of it. Example:
 # operations_aws_account_number = "123456789012"
 
-operations_aws_account_number = "123456789012"
+operations_aws_account_number = "XXX"
 
 # For the deployments IAM policies and IAM roles need to be created. In most of
 # the AWS environment we've seen you are able to work with IAM roles, but often
@@ -94,9 +94,9 @@ logs_not_resource = []
 # environment_type = "test"
 # product_domain_name = "demo"
 
-environment_type = "test"
+environment_type = "XXX"
 
-product_domain_name = "demo"
+product_domain_name = "XXX"
 
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
@@ -137,7 +137,7 @@ no_proxy = ""
 #     or
 # jenkins_config_repo_url = "ssh://git@git.comp.net:7999/~user/env-config.git"
 
-jenkins_config_repo_url = "ssh://git@github.com:kentrikos/env-config.git"
+jenkins_config_repo_url = "XXX"
 
 # IMPORTANT NOTE: This setting is only relevant if setting "auto_IAM_mode =
 # false". If setting "auto_IAM_mode = true", the settings "auto_IAM_path" and
@@ -206,12 +206,12 @@ k8s_cluster_name_postfix = "k8s.local"
 # ]
 
 k8s_masters_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/masters.eu-central-1-demo-test-ops.k8s.local",
-  "arn:aws:iam::123456789012:policy/masters_extra.eu-central-1-demo-test-ops.k8s.local",
+  "arn:aws:iam::{operations_aws_account_number}:policy/masters.{region}-{product_domain_name}-{environment_type}-ops.k8s.local",
+  "arn:aws:iam::{operations_aws_account_number}:policy/masters_extra.{region}-{product_domain_name}-{environment_type}-ops.k8s.local",
 ]
 
 # List of existing IAM policies that will be attached to instance profile for
-# worker nodes (EC2 instances):
+# worker nodes (EC2 instances).
 # Schema:
 #   arn:aws:iam::{operations_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}-ops.k8s.local
 #   arn:aws:iam::{operations_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
@@ -222,8 +222,8 @@ k8s_masters_iam_policies_arns = [
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::123456789012:policy/nodes.eu-central-1-demo-test-ops.k8s.local",
-  "arn:aws:iam::123456789012:policy/KENTRIKOS_eu-central.demo-test_AssumeCrossAccount",
+  "arn:aws:iam::{operations_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}-ops.k8s.local",
+  "arn:aws:iam::{operations_aws_account_number}:policy/KENTRIKOS_{region}.{product_domain_name}-{environment_type}_AssumeCrossAccount",
 ]
 
 # IMPORTANT NOTE: The list of (private) subnets must match the param "azs" from

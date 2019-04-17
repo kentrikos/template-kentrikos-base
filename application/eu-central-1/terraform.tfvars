@@ -6,7 +6,7 @@
 # (public) Kubernetes cluster and applications. Example:
 # application_aws_account_number = "210987654321"
 
-application_aws_account_number = "210987654321"
+application_aws_account_number = "XXX"
 
 # For the deployments IAM policies and IAM roles need to be created. In most of
 # the AWS environment we've seen you are able to work with IAM roles, but often
@@ -84,9 +84,9 @@ logs_not_resource = []
 # environment_type = "test"
 # product_domain_name = "demo"
 
-environment_type = "test"
+environment_type = "XXX"
 
-product_domain_name = "demo"
+product_domain_name = "XXX"
 
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
@@ -129,12 +129,12 @@ http_proxy_port = 8080
 # ]
 
 k8s_masters_iam_policies_arns = [
-  "arn:aws:iam::210987654321:policy/masters.eu-central-1-demo-test.k8s.local",
-  "arn:aws:iam::210987654321:policy/masters_extra.eu-central-1-demo-test.k8s.local",
+  "arn:aws:iam::{application_aws_account_number}:policy/masters.{region}-{product_domain_name}-{environment_type}.k8s.local",
+  "arn:aws:iam::{application_aws_account_number}:policy/masters_extra.{region}-{product_domain_name}-{environment_type}.k8s.local",
 ]
 
 # List of existing IAM policies that will be attached to instance profile for
-# worker nodes (EC2 instances):
+# worker nodes (EC2 instances).
 # Schema: arn:aws:iam::{application_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}.k8s.local
 # Example:
 # k8s_nodes_iam_policies_arns = [
@@ -142,7 +142,7 @@ k8s_masters_iam_policies_arns = [
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::210987654321:policy/nodes.eu-central-1-demo-test.k8s.local",
+  "arn:aws:iam::{application_aws_account_number}:policy/nodes.{region}-{product_domain_name}-{environment_type}.k8s.local",
 ]
 
 # IMPORTANT NOTE: The list of (private) subnets must match the param "azs" from
@@ -197,9 +197,10 @@ k8s_linux_distro = "debian"
 # (private) Kubernetes cluster and management tools on top of it. Example:
 # operations_aws_account_number = "123456789012"
 
-operations_aws_account_number = "123456789012"
+operations_aws_account_number = "XXX"
 
 # Cross-account role to assume before deploying the cluster.
+# Hint: Only relevant for KOPS clusters. This setting will be ignored when creating EKS clusters.
 # For auto_IAM_mode = false
 # Example:
 # iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
@@ -207,7 +208,7 @@ operations_aws_account_number = "123456789012"
 # Schema:  arn:aws:iam::{application_aws_account_number}:role/KENTRIKOS_{region}_{product_domain_name}_{environment_type}_CrossAccount
 # Example: arn:aws:iam::210987654321:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
 
-iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KopsCrossAccount"
+iam_cross_account_role_arn = "arn:aws:iam::{application_aws_account_number}:role/KENTRIKOS_{region}_{product_domain_name}_{environment_type}_CrossAccount"
 
 # iam_cross_account_role_arn = "arn:aws:iam::210987654321:role/KENTRIKOS_eu-central-1_demo_test_CrossAccount"
 
