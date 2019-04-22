@@ -295,3 +295,14 @@ k8s_install_helm = true
 # k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
 
 k8s_allowed_worker_ssh_cidrs = []
+
+# Number of ElasticSearch masters and worker nodes for logging
+# Example:
+# elasticsearch_instance_count = 3
+elasticsearch_instance_count = 2
+
+# List of CIDR ranges that will be allowed access to the ElasticSearch security group for logging. 
+# For cross-account logging, this should include the CIDRs of the private subnets in the application VPC
+# Example:
+# logging_allowed_cidrs = ["10.1.0.0/16","10.2.0.0/16"]
+logging_allowed_cidrs = []
