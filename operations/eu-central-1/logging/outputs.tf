@@ -1,15 +1,11 @@
 output "elasticsearch_endpoint" {
-  value = "${module.elasticsearch.endpoint}"
+  value = "${module.elasticsearch_logging.elasticsearch_endpoint}"
 }
 
-output "repository_url" {
-  value = "${module.fluentd_elasticsearch_image.repository_url}"
-}
-
-output "image_tag" {
-  value = "${module.fluentd_elasticsearch_image.image_tag}"
+output "kibana_endpoint" {
+  value = "${module.elasticsearch_logging.kibana_endpoint}"
 }
 
 output "iam_role_arn" {
-  value = "${aws_iam_role.operations_logging_role.arn}"
+  value = "${module.elasticsearch_logging.iam_role_arn}"
 }

@@ -18,9 +18,14 @@ variable "k8s_allowed_worker_ssh_cidrs" {
 }
 
 //New variables
+variable "elasticsearch_instance_type" {}
+
 variable "elasticsearch_instance_count" {}
 
-variable "application_aws_account_number" {}
+variable "elasticsearch_master_type" {}
+variable "elasticsearch_master_count" {}
+
+variable "elasticearch_volume_size" {}
 
 variable "tiller_service_account" {
   default = "tiller"
@@ -29,3 +34,7 @@ variable "tiller_service_account" {
 variable "logging_allowed_cidrs" {
   type = "list"
 }
+
+variable "fluentd_image_repository" {}
+
+variable "fluentd_image_tag" {}
