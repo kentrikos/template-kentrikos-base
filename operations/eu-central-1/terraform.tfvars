@@ -296,6 +296,11 @@ k8s_install_helm = true
 
 k8s_allowed_worker_ssh_cidrs = []
 
+# List of subnet ids to deploy ElasticSearch.
+# Example:
+# elasticsearch_subnet_ids = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
+elasticsearch_subnet_ids = []
+
 # Instance Type of the Elasticsearch master nodes for logging
 # Example:
 # elasticsearch_master_type = "r5.large.elasticsearch"
@@ -330,8 +335,8 @@ elasticsearch_enable_zone_awareness = true
 # List of CIDR ranges that will be allowed access to the ElasticSearch security group for logging. 
 # For cross-account logging, this should include the CIDRs of the private subnets in the application VPC
 # Example:
-# logging_allowed_cidrs = ["10.1.0.0/16","10.2.0.0/16"]
-logging_allowed_cidrs = []
+# elasticsearch_allowed_cidrs = ["10.1.0.0/16","10.2.0.0/16"]
+elasticsearch_allowed_cidrs = []
 
 # Name of the service account used for Helm Tiller
 # Example:

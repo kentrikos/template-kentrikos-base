@@ -5,7 +5,7 @@ variable "region" {}
 
 variable "cluster_context" {}
 
-variable "k8s_private_subnets" {
+variable "elasticsearch_subnet_ids" {
   type = "list"
 }
 
@@ -13,7 +13,7 @@ variable "product_domain_name" {}
 
 variable "environment_type" {}
 
-variable "k8s_allowed_worker_ssh_cidrs" {
+variable "elasticsearch_allowed_cidrs" {
   type = "list"
 }
 
@@ -26,6 +26,8 @@ variable "elasticsearch_master_type" {}
 variable "elasticsearch_master_count" {}
 
 variable "elasticearch_volume_size" {}
+
+variable "elasticsearch_enable_zone_awareness" {}
 
 variable "tiller_service_account" {
   default = "tiller"
