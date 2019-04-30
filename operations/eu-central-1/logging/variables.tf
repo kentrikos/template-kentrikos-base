@@ -33,10 +33,6 @@ variable "tiller_service_account" {
   default = "tiller"
 }
 
-variable "logging_allowed_cidrs" {
-  type = "list"
-}
-
 variable "fluentd_image_repository" {}
 
 variable "fluentd_image_tag" {}
