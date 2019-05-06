@@ -2,6 +2,10 @@ data "aws_vpc" "this" {
   id = "${var.vpc_id}"
 }
 
+locals {
+  trusted_app_role_arn = "arn:aws:iam::${var.application_aws_account_number}:root"
+}
+
 module "elasticsearch_logging" {
   source                               = "github.com/kentrikos/terraform-aws-logging?ref=firstbuild"
   region                               = "${var.region}"
@@ -20,4 +24,5 @@ module "elasticsearch_logging" {
   fluentd_image_repository             = "${var.fluentd_image_repository}"
   fluentd_image_tag                    = "${var.fluentd_image_tag}"
   tiller_service_account               = "${var.tiller_service_account}"
+  trusted_roles_arns                   = ["${local.trusted_app_role_arn}"]
 }
