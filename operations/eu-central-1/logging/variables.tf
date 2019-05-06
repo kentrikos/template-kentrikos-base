@@ -36,3 +36,5 @@ variable "tiller_service_account" {
 variable "fluentd_image_repository" {}
 
 variable "fluentd_image_tag" {}
+
+variable "application_aws_account_number" {}
