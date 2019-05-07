@@ -15,3 +15,5 @@ variable "elasticsearch_endpoint" {}
 variable "fluentd_image_repository" {}
 
 variable "fluentd_image_tag" {}
+
+variable "cluster_type" {}
