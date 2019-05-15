@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - input for operations and application account infrastructure
 - incremented Jenkins Core version to 0.7.0
+- Added logging modules for app and ops accounts 
 
 ## [6.0.1] - 2019-04-16
 - Solved gp2 storage creation in EKS module

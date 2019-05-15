@@ -7,7 +7,7 @@ locals {
 }
 
 module "elasticsearch_logging" {
-  source                               = "github.com/kentrikos/terraform-aws-logging?ref=firstbuild"
+  source                               = "github.com/kentrikos/terraform-aws-logging?ref=0.2.0"
   region                               = "${var.region}"
   vpc_id                               = "${var.vpc_id}"
   elasticsearch_subnet_ids             = "${var.elasticsearch_subnet_ids}"

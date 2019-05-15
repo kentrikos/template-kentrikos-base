@@ -17,3 +17,5 @@ variable "fluentd_image_repository" {}
 variable "fluentd_image_tag" {}
 
 variable "cluster_type" {}
+
+variable "application_aws_account_number" {}
