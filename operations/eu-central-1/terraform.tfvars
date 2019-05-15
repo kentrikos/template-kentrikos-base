@@ -295,3 +295,50 @@ k8s_install_helm = true
 # k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
 
 k8s_allowed_worker_ssh_cidrs = []
+
+# List of subnet ids to deploy ElasticSearch.
+# Example:
+# elasticsearch_subnet_ids = ["subnet-XXXX", "subnet-ZZZZ", "subnet-YYYY"]
+elasticsearch_subnet_ids = []
+
+# Instance Type of the Elasticsearch master nodes for logging
+# Example:
+# elasticsearch_master_type = "r5.large.elasticsearch"
+elasticsearch_master_type = "r5.large.elasticsearch"
+
+# Number of ElasticSearch masters nodes for logging
+# Example:
+# elasticsearch_master_count = 3
+elasticsearch_master_count = 3
+
+# Instance Type of the Elasticsearch instance nodes for logging
+# Example:
+# elasticsearch_instance_type = "r5.large.elasticsearch"
+elasticsearch_instance_type = "r5.large.elasticsearch"
+
+# Number of ElasticSearch instance nodes for logging
+# Example:
+# elasticsearch_instance_count = 3
+elasticsearch_instance_count = 3
+
+# Volume size for ElasticSearch in GB for logging
+# Example:
+# elasticearch_volume_size = 10
+elasticearch_volume_size = 10
+
+# Enable multi-availability zone deployment for ElasticSearch for logging
+# If enabled, the instance_count should be a multiple of the subnets used for deployment.
+# Example:
+# elasticsearch_enable_zone_awareness = true
+elasticsearch_enable_zone_awareness = true
+
+# List of CIDR ranges that will be allowed access to the ElasticSearch security group for logging. 
+# For cross-account logging, this should include the CIDRs of the private subnets in the application VPC
+# Example:
+# elasticsearch_allowed_cidrs = ["10.1.0.0/16","10.2.0.0/16"]
+elasticsearch_allowed_cidrs = []
+
+# Name of the service account used for Helm Tiller
+# Example:
+# tiller_service_acccount = "tiller"
+tiller_service_account = "tiller"

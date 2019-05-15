@@ -243,3 +243,8 @@ k8s_install_helm = true
 # k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
 
 k8s_allowed_worker_ssh_cidrs = []
+
+# Name of the service account used for Helm Tiller
+# Example:
+# tiller_service_acccount = "tiller"
+tiller_service_account = "tiller"
