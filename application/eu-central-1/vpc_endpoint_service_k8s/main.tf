@@ -24,7 +24,7 @@ module "vpc-endpoint-services-nlb-ingress" {
   nlb_subnets       = "${var.k8s_private_subnets}"
   nlb_listener_port = "${var.ingress_nlb_listener_port}"
 
-  k8s_ingress_service_nodeport = "${data.terraform_remote_state.application-account.ingress_service_nodeport}"
+  k8s_ingress_service_nodeport = "${data.terraform_remote_state.application-account.ingress_service_nodeport_http}"
   k8s_workers_asg_names        = "${data.terraform_remote_state.application-account.workers_asg_names}"
 
   vpces_acceptance_required = "${var.vpces_acceptance_required}"
