@@ -50,3 +50,7 @@ variable "k8s_install_helm" {}
 variable "k8s_allowed_worker_ssh_cidrs" {
   type = "list"
 }
+
+variable "k8s_allowed_worker_nodeport_cidrs" {
+  type = "list"
+}
