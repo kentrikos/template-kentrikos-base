@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2019-05-22
+### Added
+- Configuration for Kubernetes Ingress and associated VPC Endpoint Service
+
 ## [0.7.0] - 2019-05-15
 ### Added
 - input for operations and application account infrastructure
