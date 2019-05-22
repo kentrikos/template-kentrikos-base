@@ -189,6 +189,32 @@ k8s_aws_ssh_keypair_name = ""
 
 k8s_linux_distro = "debian"
 
+# VPC Endpoint Service for ingress:
+
+# Deploy Kubernetes Ingress controller on the cluster (requires install_helm=true)
+# Example:
+# k8s_ingress_deploy = true
+
+k8s_ingress_deploy = true
+
+# Port for the listener of NLB associated with ingress
+# Example:
+# ingress_nlb_listener_port = 80
+
+ingress_nlb_listener_port = 80
+
+# Whether or not VPC endpoint connection requests to the service must be accepted by the service owner
+# Example:
+# vpces_acceptance_required = "true"
+
+vpces_acceptance_required = true
+
+# The ARNs of one or more principals allowed to discover the endpoint service
+# Example:
+# vpces_allowed_principals = ["arn:aws:iam::210987654321:root"]
+
+vpces_allowed_principals = []
+
 ###############################################################################
 # Operations account configuration
 ###############################################################################
