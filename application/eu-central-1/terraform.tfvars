@@ -215,6 +215,11 @@ vpces_acceptance_required = true
 
 vpces_allowed_principals = []
 
+# List of CIDR ranges that will be allowed connect into cluster node port.
+# Example:
+# k8s_allowed_worker_nodeport_cidrs = ["10.10.0.0/8"]
+k8s_allowed_worker_nodeport_cidrs = []
+
 ###############################################################################
 # Operations account configuration
 ###############################################################################

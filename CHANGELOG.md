@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2019-05-27
+### Changed
+- Bump Jenkins core infra to 0.8.1 
+- Bump application account module to 0.5.1
+
+### Fixed
+- Add missing k8s_allowed_worker_nodeport_cidrs var to application tfvars
+
 ## [0.8.0] - 2019-05-22
 ### Added
 - Configuration for Kubernetes Ingress and associated VPC Endpoint Service
