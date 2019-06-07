@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.2] - 2019-06-07
+### Changed
+- Bump EKS module version
+
 ## [0.8.1] - 2019-05-27
 ### Changed
 - Bump Jenkins core infra to 0.8.1 
