@@ -19,9 +19,9 @@ Files that need to be updated :
 * operations/$REGION/env-eks/jenkins/parameters.yaml (configs for grafana installation)
 * operations/$REGION/env-eks/grafana/parameters.yaml (configs for grafana installation)
 
-* operations/$REGION/env-eks/grafana/alertmanager.yml (configs for prometheus alertmanager installation)
-* operations/$REGION/env-kops/grafana/alertmanager.yml (configs for prometheus alertmanager installation)
-* application/$REGION/env-eks/grafana/alertmanager.yml (configs for prometheus alertmanager installation)
-* application/$REGION/env-kops/grafana/alertmanager.yml (configs for prometheus alertmanager installation)
+* operations/$REGION/env-eks/prometheus/alertmanager.yml (configs for prometheus alertmanager installation)
+* operations/$REGION/env-kops/prometheus/alertmanager.yml (configs for prometheus alertmanager installation)
+* application/$REGION/env-eks/prometheus/alertmanager.yml (configs for prometheus alertmanager installation)
+* application/$REGION/env-kops/prometheus/alertmanager.yml (configs for prometheus alertmanager installation)
 
 To setup on another region change directories name or copy as new region name and update config files accordingly
