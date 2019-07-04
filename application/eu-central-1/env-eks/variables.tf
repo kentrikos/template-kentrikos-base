@@ -56,3 +56,27 @@ variable "k8s_allowed_worker_ssh_cidrs" {
 variable "k8s_allowed_worker_nodeport_cidrs" {
   type = "list"
 }
+
+variable "k8s_map_accounts" {
+  type = "list"
+}
+
+variable "k8s_map_accounts_count" {
+  type = "string"
+}
+
+variable "k8s_map_roles" {
+  type = "list"
+}
+
+variable "k8s_map_roles_count" {
+  type = "string"
+}
+
+variable "k8s_map_users" {
+  type = "list"
+}
+
+variable "k8s_map_users_count" {
+  type = "string"
+}

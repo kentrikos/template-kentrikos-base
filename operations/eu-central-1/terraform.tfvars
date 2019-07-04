@@ -342,3 +342,45 @@ elasticsearch_allowed_cidrs = []
 # Example:
 # tiller_service_acccount = "tiller"
 tiller_service_account = "tiller"
+
+# Additional AWS account numbers to add to the aws-auth configmap. See terraform-aws-modules-eks examples/basic/variables.tf for example format.
+# Example:
+# k8s_map_accounts=["777777777777",
+#               "888888888888",]
+k8s_map_accounts = []
+
+#The count of accounts in the k8s_map_accounts list.
+k8s_map_accounts_count = 0
+
+# Additional IAM roles to add to the aws-auth configmap. See terraform-aws-modules-eks examples/basic/variables.tf for example format.
+# Example:
+# k8s_map_roles=[
+#  {
+#    role_arn = "arn:aws:iam::66666666666:role/role1"
+#    username = "role1"
+#    group    = "system:masters"
+#  },
+#]
+k8s_map_roles = []
+
+# The count of roles in the k8s_map_roles list.
+k8s_map_roles_count = 0
+
+# Additional IAM users to add to the aws-auth configmap. See terraform-aws-modules-eksexamples/basic/variables.tf for example format.
+# Example:
+# k8s_map_users = [
+#  {
+#    user_arn = "arn:aws:iam::66666666666:user/user1"
+#    username = "user1"
+#    group    = "system:masters"
+#  },
+#  {
+#    user_arn = "arn:aws:iam::66666666666:user/user2"
+#    username = "user2"
+#    group    = "system:masters"
+#  },
+#]
+k8s_map_users = []
+
+# The count of roles in the k8s_map_users list.
+k8s_map_users_count = 0
