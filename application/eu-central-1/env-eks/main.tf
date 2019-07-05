@@ -26,4 +26,11 @@ module "application" {
   iam_cross_account_role_arn    = "${var.iam_cross_account_role_arn}"
   k8s_masters_iam_policies_arns = "${var.k8s_masters_iam_policies_arns}"
   k8s_nodes_iam_policies_arns   = "${var.k8s_nodes_iam_policies_arns}"
+
+  map_roles          = "${var.k8s_map_roles}"
+  map_roles_count    = "${var.k8s_map_roles_count}"
+  map_users          = "${var.k8s_map_users}"
+  map_users_count    = "${var.k8s_map_users_count}"
+  map_accounts       = "${var.k8s_map_accounts}"
+  map_accounts_count = "${var.k8s_map_accounts_count}"
 }
