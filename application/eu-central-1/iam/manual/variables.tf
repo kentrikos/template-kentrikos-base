@@ -26,7 +26,7 @@ variable "k8s_cluster_name_postfix" {
 variable "logs_not_resource" {
   description = "List of resources that log police will use for NotResource, empty means that Resource * is set"
   default     = []
-  type        = "list"
+  type        = list(string)
 }
 
 variable "auto_IAM_mode" {
@@ -36,3 +36,4 @@ variable "auto_IAM_mode" {
 variable "auto_IAM_path" {
   description = "IAM path for auto IAM mode uploaded policies"
 }
+
