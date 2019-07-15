@@ -80,13 +80,25 @@ auto_IAM_path = "/"
 logs_not_resource = []
 
 # The following settings will configure tags and names in the deployment, e.g.
-# for EC2 instance name tags. Examples:
+# for EC2 instance name tags. 
+#
+# IMPORTANT NOTE:
+# The combination of region - product_domain_name - environment_type cannot be longer than 32 chars
+# Examples: 
+#   eu-central-1-long-product-domain-name-test = 43 chars
+#   eu-central-1-product-domain-name-test = 38 chars
+#   eu-central-1-productdomain-test = 32 chars
+#
+# otherwise your deployment will fail:
+# 
+# Examples:
 # environment_type = "test"
 # product_domain_name = "demo"
 
 environment_type = "test"
 
 product_domain_name = "demo"
+
 
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
