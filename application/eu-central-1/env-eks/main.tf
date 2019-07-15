@@ -31,4 +31,3 @@ module "application" {
   map_users    = var.k8s_map_users
   map_accounts = var.k8s_map_accounts
 }
-
