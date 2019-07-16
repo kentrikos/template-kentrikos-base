@@ -349,9 +349,6 @@ tiller_service_account = "tiller"
 #               "888888888888",]
 k8s_map_accounts = []
 
-#The count of accounts in the k8s_map_accounts list.
-k8s_map_accounts_count = 0
-
 # Additional IAM roles to add to the aws-auth configmap. See terraform-aws-modules-eks examples/basic/variables.tf for example format.
 # Example:
 # k8s_map_roles=[
@@ -362,9 +359,6 @@ k8s_map_accounts_count = 0
 #  },
 #]
 k8s_map_roles = []
-
-# The count of roles in the k8s_map_roles list.
-k8s_map_roles_count = 0
 
 # Additional IAM users to add to the aws-auth configmap. See terraform-aws-modules-eksexamples/basic/variables.tf for example format.
 # Example:
@@ -381,6 +375,3 @@ k8s_map_roles_count = 0
 #  },
 #]
 k8s_map_users = []
-
-# The count of roles in the k8s_map_users list.
-k8s_map_users_count = 0
