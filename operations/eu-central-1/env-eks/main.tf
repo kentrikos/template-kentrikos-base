@@ -30,5 +30,7 @@ module "operations" {
   map_roles    = var.k8s_map_roles
   map_users    = var.k8s_map_users
   map_accounts = var.k8s_map_accounts
+
+  k8s_cluster_version = var.k8s_cluster_version
 }
 

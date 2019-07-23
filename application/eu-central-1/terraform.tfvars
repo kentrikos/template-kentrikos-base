@@ -312,3 +312,9 @@ k8s_map_roles = []
 #  },
 #]
 k8s_map_users = []
+
+# Kubernetes version to use for the EKS cluster.
+# null - take default version from Kentrikos
+# Example:
+# k8s_cluster_version = "1.13"
+k8s_cluster_version = null

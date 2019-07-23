@@ -77,7 +77,9 @@ variable "k8s_map_roles" {
   type = list(map(string))
 }
 
-
 variable "k8s_map_users" {
   type = list(map(string))
+}
+
+variable "k8s_cluster_version" {
 }
