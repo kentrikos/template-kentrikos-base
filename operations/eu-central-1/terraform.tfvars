@@ -292,7 +292,7 @@ k8s_install_helm = true
 
 # List of CIDR ranges that will be allowed SSH into cluster node instances.
 # Example:
-# k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
+# k8s_allowed_worker_ssh_cidrs = ["10.0.0.0/8"]
 
 k8s_allowed_worker_ssh_cidrs = []
 
