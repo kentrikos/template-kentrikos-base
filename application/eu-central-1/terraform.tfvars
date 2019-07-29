@@ -99,7 +99,6 @@ environment_type = "test"
 
 product_domain_name = "demo"
 
-
 # IMPORTANT NOTE: Currently only one or three availability zones are supported.
 #
 # Parameters to configure the network for your deployment. Enter the target AWS
