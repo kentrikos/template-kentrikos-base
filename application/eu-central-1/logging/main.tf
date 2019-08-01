@@ -3,7 +3,7 @@ locals {
 }
 
 module "elasticsearch_logging" {
-  source                         = "github.com/kentrikos/terraform-aws-logging-app?ref=terraform12"
+  source                         = "github.com/kentrikos/terraform-aws-logging-app?ref=1.0.0"
   region                         = var.region
   elasticsearch_domain_name      = "${var.region}-${var.product_domain_name}-${var.environment_type}"
   elasticsearch_endpoint         = var.elasticsearch_endpoint

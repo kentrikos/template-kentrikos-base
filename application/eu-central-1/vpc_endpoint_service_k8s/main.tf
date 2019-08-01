@@ -17,7 +17,7 @@ locals {
 }
 
 module "vpc-endpoint-services-nlb-ingress" {
-  source = "github.com/kentrikos/terraform-aws-k8s-ingress-proxy-vpc-endpoint-service.git?ref=terraform12"
+  source = "github.com/kentrikos/terraform-aws-k8s-ingress-proxy-vpc-endpoint-service.git?ref=1.0.0"
 
   vpc_id            = var.vpc_id
   nlb_name          = "${var.product_domain_name}-${var.environment_type}-ingress-nlb"
