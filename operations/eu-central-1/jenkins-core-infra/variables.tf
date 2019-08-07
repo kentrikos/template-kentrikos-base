@@ -46,12 +46,12 @@ variable "http_proxy_port" {
 
 variable "jenkins_ssh_allowed_cidrs" {
   description = "CIDRs we allow ssh from"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "jenkins_http_allowed_cidrs" {
   description = "CIDRs we allow http from"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "jenkins_config_repo_url" {
@@ -73,3 +73,4 @@ variable "jenkins_dns_domain_hosted_zone_ID" {
 variable "jenkins_dns_hostname" {
   description = "Local part of FQDN for Jenkins master"
 }
+

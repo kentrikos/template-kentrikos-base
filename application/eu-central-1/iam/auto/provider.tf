@@ -3,9 +3,10 @@
 
 provider "aws" {
   assume_role {
-    role_arn = "${var.iam_cross_account_role_arn}"
+    role_arn = var.iam_cross_account_role_arn
   }
 
-  region  = "${var.region}"
-  version = "~> 2.5.0"
+  region  = var.region
+  version = "~> 2.20.0"
 }
+

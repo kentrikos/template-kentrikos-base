@@ -1,40 +1,56 @@
 //Existing variables
-variable "vpc_id" {}
-
-variable "region" {}
-
-variable "cluster_context" {}
-
-variable "elasticsearch_subnet_ids" {
-  type = "list"
+variable "vpc_id" {
 }
 
-variable "product_domain_name" {}
+variable "region" {
+}
 
-variable "environment_type" {}
+variable "cluster_context" {
+}
+
+variable "elasticsearch_subnet_ids" {
+  type = list(string)
+}
+
+variable "product_domain_name" {
+}
+
+variable "environment_type" {
+}
 
 variable "elasticsearch_allowed_cidrs" {
-  type = "list"
+  type = list(string)
 }
 
 //New variables
-variable "elasticsearch_instance_type" {}
+variable "elasticsearch_instance_type" {
+}
 
-variable "elasticsearch_instance_count" {}
+variable "elasticsearch_instance_count" {
+}
 
-variable "elasticsearch_master_type" {}
-variable "elasticsearch_master_count" {}
+variable "elasticsearch_master_type" {
+}
 
-variable "elasticearch_volume_size" {}
+variable "elasticsearch_master_count" {
+}
 
-variable "elasticsearch_enable_zone_awareness" {}
+variable "elasticearch_volume_size" {
+}
+
+variable "elasticsearch_enable_zone_awareness" {
+}
 
 variable "tiller_service_account" {
   default = "tiller"
 }
 
-variable "fluentd_image_repository" {}
+variable "fluentd_image_repository" {
+}
 
-variable "fluentd_image_tag" {}
+variable "fluentd_image_tag" {
+}
 
-variable "application_aws_account_number" {}
+variable "application_aws_account_number" {
+}
+

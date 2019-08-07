@@ -292,7 +292,7 @@ k8s_install_helm = true
 
 # List of CIDR ranges that will be allowed SSH into cluster node instances.
 # Example:
-# k8s_allowed_worker_ssh_cidrs = ["10.10.0.0/8"]
+# k8s_allowed_worker_ssh_cidrs = ["10.0.0.0/8"]
 
 k8s_allowed_worker_ssh_cidrs = []
 
@@ -349,9 +349,6 @@ tiller_service_account = "tiller"
 #               "888888888888",]
 k8s_map_accounts = []
 
-#The count of accounts in the k8s_map_accounts list.
-k8s_map_accounts_count = 0
-
 # Additional IAM roles to add to the aws-auth configmap. See terraform-aws-modules-eks examples/basic/variables.tf for example format.
 # Example:
 # k8s_map_roles=[
@@ -362,9 +359,6 @@ k8s_map_accounts_count = 0
 #  },
 #]
 k8s_map_roles = []
-
-# The count of roles in the k8s_map_roles list.
-k8s_map_roles_count = 0
 
 # Additional IAM users to add to the aws-auth configmap. See terraform-aws-modules-eksexamples/basic/variables.tf for example format.
 # Example:
@@ -382,5 +376,7 @@ k8s_map_roles_count = 0
 #]
 k8s_map_users = []
 
-# The count of roles in the k8s_map_users list.
-k8s_map_users_count = 0
+# Kubernetes version to use for the EKS cluster.
+# Example:
+# k8s_cluster_version = "1.13"
+k8s_cluster_version = "1.13"

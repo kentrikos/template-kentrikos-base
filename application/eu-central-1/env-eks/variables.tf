@@ -1,82 +1,88 @@
-variable "product_domain_name" {}
+variable "product_domain_name" {
+}
 
-variable "environment_type" {}
+variable "environment_type" {
+}
 
 variable "k8s_private_subnets" {
-  type = "list"
+  type = list(string)
 }
 
 variable "k8s_public_subnets" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
 
-variable "k8s_node_count" {}
-
-variable "region" {}
-
-variable "azs" {
-  type = "list"
+variable "k8s_node_count" {
 }
 
-variable "vpc_id" {}
+variable "region" {
+}
 
-variable "iam_cross_account_role_arn" {}
+variable "azs" {
+  type = list(string)
+}
+
+variable "vpc_id" {
+}
+
+variable "iam_cross_account_role_arn" {
+}
 
 variable "k8s_masters_iam_policies_arns" {
-  type = "list"
+  type = list(string)
 }
 
 variable "k8s_nodes_iam_policies_arns" {
-  type = "list"
+  type = list(string)
 }
 
-variable "k8s_master_instance_type" {}
+variable "k8s_master_instance_type" {
+}
 
-variable "k8s_node_instance_type" {}
+variable "k8s_node_instance_type" {
+}
 
-variable "k8s_aws_ssh_keypair_name" {}
+variable "k8s_aws_ssh_keypair_name" {
+}
 
-variable "k8s_linux_distro" {}
+variable "k8s_linux_distro" {
+}
 
-variable "k8s_enable_pod_autoscaling" {}
+variable "k8s_enable_pod_autoscaling" {
+}
 
-variable "k8s_enable_cluster_autoscaling" {}
+variable "k8s_enable_cluster_autoscaling" {
+}
 
-variable "k8s_protect_cluster_from_scale_in" {}
+variable "k8s_protect_cluster_from_scale_in" {
+}
 
-variable "k8s_install_helm" {}
+variable "k8s_install_helm" {
+}
 
-variable "k8s_ingress_deploy" {}
+variable "k8s_ingress_deploy" {
+}
 
 variable "k8s_allowed_worker_ssh_cidrs" {
-  type = "list"
+  type = list(string)
 }
 
 variable "k8s_allowed_worker_nodeport_cidrs" {
-  type = "list"
+  type = list(string)
 }
 
 variable "k8s_map_accounts" {
-  type = "list"
-}
-
-variable "k8s_map_accounts_count" {
-  type = "string"
+  type = list(string)
 }
 
 variable "k8s_map_roles" {
-  type = "list"
-}
-
-variable "k8s_map_roles_count" {
-  type = "string"
+  type = list(map(string))
 }
 
 variable "k8s_map_users" {
-  type = "list"
+  type = list(map(string))
 }
 
-variable "k8s_map_users_count" {
-  type = "string"
+variable "k8s_cluster_version" {
 }
