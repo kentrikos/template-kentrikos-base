@@ -73,7 +73,7 @@ fromDirectory = "application/region"
 toDirectory = "application/" + region + "/"
 copy_tree(fromDirectory, toDirectory)
 
-TEMPLATE_FILE = "operations/" + region + "/terraform.tfvars.template"
+TEMPLATE_FILE = "operations/" + region + "/terraform.template.tfvars"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
@@ -83,7 +83,7 @@ f.write(rendered_file)
 print(rendered_file)
 
 
-TEMPLATE_FILE = "application/" + region + "/terraform.tfvars.template"
+TEMPLATE_FILE = "application/" + region + "/terraform.template.tfvars"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
@@ -92,11 +92,11 @@ f = open("application/" + region + "/terraform.tfvars" , "w")
 f.write(rendered_file)
 print(rendered_file)
 
-TEMPLATE_FILE = "operations/region/env/jenkins/parameters.yaml.template"
+TEMPLATE_FILE = "operations/" + region + "/env-eks/jenkins/parameters.template.yaml"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
 rendered_file = template.render(gitUsername=gitUsername,gitApiToken=gitApiToken,gitProviderUrl=gitProviderUrl,gitBitbucketServer=gitBitbucketServer,jxDomainAliasPrefix=jxDomainAliasPrefix,private_hosted_zone_id=private_hosted_zone_id)
-f = open("operations/" + region + "/env/jenkins/parameters.yaml" , "w")
+f = open("operations/" + region + "/env-eks/jenkins/parameters.yaml" , "w")
 f.write(rendered_file)
 print(rendered_file)
