@@ -77,7 +77,7 @@ TEMPLATE_FILE = "operations/" + region + "/terraform.template.tfvars"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
-rendered_file = template.render(aws_account=aws_account,environment_type=environment_type,aws_opp_account=aws_opp_account,region=region,vpc_id=vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,jxDomainAliasPrefix=jxDomainAliasPrefix,http_proxy=http_proxy,jenkins_config_url=jenkins_config_url,private_hosted_zone_id=private_hosted_zone_id,private_hosted_zone_alias_jenkins=private_hosted_zone_alias_jenkins)
+rendered_file = template.render(application_aws_account_number=aws_account,environment_type=environment_type,operations_aws_account_number=aws_opp_account,region=region,vpc_id=operations_vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,jxDomainAliasPrefix=jxDomainAliasPrefix,http_proxy=operations_http_proxy,jenkins_config_url=jenkins_config_url,private_hosted_zone_id=private_hosted_zone_id,private_hosted_zone_alias_jenkins=private_hosted_zone_alias_jenkins)
 f = open("operations/" + region + "/terraform.tfvars" , "w")
 f.write(rendered_file)
 print(rendered_file)
@@ -87,9 +87,10 @@ TEMPLATE_FILE = "application/" + region + "/terraform.template.tfvars"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
-rendered_file = template.render(aws_account=aws_account,environment_type=environment_type,aws_opp_account=aws_opp_account,region=region,vpc_id=vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,http_proxy=http_proxy)
+rendered_file = template.render(application_aws_account_number=aws_account,environment_type=environment_type,operations_aws_account_number=aws_opp_account,region=region,vpc_id=vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,applications_http_proxy=http_proxy)
 f = open("application/" + region + "/terraform.tfvars" , "w")
 f.write(rendered_file)
+f.close()
 print(rendered_file)
 
 TEMPLATE_FILE = "operations/" + region + "/env-eks/jenkins/parameters.template.yaml"
@@ -99,4 +100,5 @@ with open(TEMPLATE_FILE) as file_:
 rendered_file = template.render(gitUsername=gitUsername,gitApiToken=gitApiToken,gitProviderUrl=gitProviderUrl,gitBitbucketServer=gitBitbucketServer,jxDomainAliasPrefix=jxDomainAliasPrefix,private_hosted_zone_id=private_hosted_zone_id)
 f = open("operations/" + region + "/env-eks/jenkins/parameters.yaml" , "w")
 f.write(rendered_file)
+f.close()
 print(rendered_file)
