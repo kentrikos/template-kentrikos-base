@@ -1,5 +1,12 @@
+import glob, os, shutil
+
 from jinja2 import Template #this may require a pip install jinja2
 from distutils.dir_util import copy_tree
+
+# remove old templated files, eg. us-east-1
+dirs = [glob.glob(e) for e in ['operations/[!region]*/', 'application/[!region]*/']]
+for dir in dirs:
+    shutil.rmtree("".join(dir))
 
 #DEFAULT VALUES
 default_aws_account = '1234567890'
@@ -77,7 +84,7 @@ TEMPLATE_FILE = "operations/" + region + "/terraform.template.tfvars"
 with open(TEMPLATE_FILE) as file_:
     template = Template(file_.read())
 #add value from top section here if newly added    
-rendered_file = template.render(application_aws_account_number=aws_account,environment_type=environment_type,operations_aws_account_number=aws_opp_account,region=region,vpc_id=operations_vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,jxDomainAliasPrefix=jxDomainAliasPrefix,http_proxy=operations_http_proxy,jenkins_config_url=jenkins_config_url,private_hosted_zone_id=private_hosted_zone_id,private_hosted_zone_alias_jenkins=private_hosted_zone_alias_jenkins)
+rendered_file = template.render(application_aws_account_number=aws_account,environment_type=environment_type,operations_aws_account_number=aws_opp_account,region=region,vpc_id=vpc_id,subnet1_id=subnet1_id,subnet2_id=subnet2_id,subnet3_id=subnet3_id,product_domain_name=product_domain_name,jxDomainAliasPrefix=jxDomainAliasPrefix,http_proxy=http_proxy,jenkins_config_url=jenkins_config_url,private_hosted_zone_id=private_hosted_zone_id,private_hosted_zone_alias_jenkins=private_hosted_zone_alias_jenkins)
 f = open("operations/" + region + "/terraform.tfvars" , "w")
 f.write(rendered_file)
 print(rendered_file)
