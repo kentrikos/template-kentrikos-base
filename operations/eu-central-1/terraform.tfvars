@@ -391,3 +391,27 @@ k8s_map_users = []
 # Example:
 # k8s_cluster_version = "1.13"
 k8s_cluster_version = "1.13"
+
+# AWS Route53 Hosted Zone ID for domain that will be used by vpces endpoint
+# Example:
+# dns_domain_hosted_zone_ID = "ABCDEFGHIJKLMN"
+
+dns_domain_hosted_zone_ID = ""
+
+# Hostname for vpces endpoint
+# Example:
+# endpoint_dns_hostname       = "exampleapp"
+endpoint_dns_hostname = ""
+
+# List of security group ids to be attached to endpoint
+# Example:
+# endpoint_dns_hostname       = ["sg-ZZZZZXXXXXCCCC"]
+endpoint_security_group_ids = []
+
+# The list of (private) subnets
+# Enter a list of target Subnet IDs of existing subnets where the Endpoint
+# will be deployed (for operations account only existing Subnets are
+# accepted).
+# Example:
+# endpoint_private_subnets = ["subnet-abcd1234", "subnet-defg5678", "subnet-hijk0912"]
+endpoint_private_subnets = []

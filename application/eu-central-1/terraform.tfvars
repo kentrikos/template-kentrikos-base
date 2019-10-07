@@ -328,3 +328,16 @@ k8s_map_users = []
 # Example:
 # k8s_cluster_version = "1.13"
 k8s_cluster_version = "1.13"
+
+
+ingress_helm_values = {
+  "controller.service.targetPorts.http"                                                        = "http"
+  "controller.service.targetPorts.https"                                                       = "https"
+  "controller.service.enableHttps"                                                             = "true"
+  "controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-type"     = "nlb"
+  "controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-internal" = "true"
+  "controller.config.ssl-protocols"                                                            = "TLSv1 TLSv1.1 TLSv1.2"
+  "controller.config.ssl-ciphers"                                                              = "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA"
+}
+
+ingress_service_type = "LoadBalancer"

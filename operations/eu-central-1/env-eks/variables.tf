@@ -73,12 +73,21 @@ variable "k8s_map_accounts" {
   type = list(string)
 }
 
+
 variable "k8s_map_roles" {
-  type = list(map(string))
+  type = list(object({
+    rolearn  = string
+    username = string
+    groups   = list(string)
+  }))
 }
 
 variable "k8s_map_users" {
-  type = list(map(string))
+  type = list(object({
+    userarn  = string
+    username = string
+    groups   = list(string)
+  }))
 }
 
 variable "k8s_cluster_version" {

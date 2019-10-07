@@ -1,5 +1,5 @@
 module "operations" {
-  source = "github.com/kentrikos/terraform-aws-account-operations?ref=1.0.0"
+  source = "github.com/kentrikos/terraform-aws-account-operations?ref=ingress_upgrade"
 
   product_domain_name = var.product_domain_name
   environment_type    = var.environment_type
