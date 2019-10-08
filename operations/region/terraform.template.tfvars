@@ -132,11 +132,11 @@ vpc_id = "{{ops_vpc_id}}"
 # http_proxy_port = 8080
 # no_proxy = "localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.169.254,.internal,.elb.us-east-1.amazonaws.com,.elb.amazonaws.com"
 
-http_proxy = "{{ops_http_proxy}}"
+http_proxy = "{{http_proxy}}"
 
 http_proxy_port = 8080
 
-no_proxy = "{{ops_no_proxy}}"
+no_proxy = "{{no_proxy}}"
 
 ###############################################################################
 # Core Infra Jenkins Configuration in Operations account
@@ -189,14 +189,14 @@ jenkins_ec2_instance_type = "{{jenkins_ec2_instance_type}}"
 # Example:
 # jenkins_dns_domain_hosted_zone_ID = "ABCDEFGHIJKLMN"
 
-jenkins_dns_domain_hosted_zone_ID = "{{jenkins_dns_domain_hosted_zone_ID}}"
+jenkins_dns_domain_hosted_zone_ID = "{{jenkins_hosted_zone_ID}}"
 
 # This parameter is a prefix for wildcard alias that will be created for jenkins
 # Example:
 # jenkins_dns_hostname = "jenkins"
 # and as result will be jenkins address - jenkins.myorganization.domain.com
 
-jenkins_dns_hostname = "{{jenkins_dns_hostname}}"
+jenkins_dns_hostname = "{{jenkins_hostname}}"
 
 ###############################################################################
 # Kubernetes Cluster Configuration in Operations account
