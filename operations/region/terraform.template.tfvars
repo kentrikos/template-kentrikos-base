@@ -6,7 +6,7 @@
 # (public) Kubernetes cluster and applications. Example:
 # application_aws_account_number = "210987654321"
 
-application_aws_account_number = "{{application_aws_account_number}}"
+application_aws_account_number = "{{app_account}}"
 
 ###############################################################################
 # Operations account configuration
@@ -16,7 +16,7 @@ application_aws_account_number = "{{application_aws_account_number}}"
 # (private) Kubernetes cluster and management tools on top of it. Example:
 # operations_aws_account_number = "123456789012"
 
-operations_aws_account_number = "{{operations_aws_account_number}}"
+operations_aws_account_number = "{{ops_account}}"
 
 # For the deployments IAM policies and IAM roles need to be created. In most of
 # the AWS environment we've seen you are able to work with IAM roles, but often
@@ -123,7 +123,7 @@ region = "{{region}}"
 
 azs = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
 
-vpc_id = "{{operations_vpc_id}}"
+vpc_id = "{{ops_vpc_id}}"
 
 # Proxy settings to use for Internet access. Enter the proxy address (FQDN or IP
 # incl.  # authentication information if needed, without http(s):// prefix)
@@ -132,11 +132,11 @@ vpc_id = "{{operations_vpc_id}}"
 # http_proxy_port = 8080
 # no_proxy = "localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,169.254.169.254,.internal,.elb.us-east-1.amazonaws.com,.elb.amazonaws.com"
 
-http_proxy = "{{operations_http_proxy}}"
+http_proxy = "{{ops_http_proxy}}"
 
 http_proxy_port = 8080
 
-no_proxy = "{{operations_no_proxy}}"
+no_proxy = "{{ops_no_proxy}}"
 
 ###############################################################################
 # Core Infra Jenkins Configuration in Operations account
@@ -217,8 +217,8 @@ k8s_cluster_name_postfix = "k8s.local"
 # ]
 
 k8s_masters_iam_policies_arns = [
-  "arn:aws:iam::{{operations_aws_account_number}}:policy/masters.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
-  "arn:aws:iam::{{operations_aws_account_number}}:policy/masters_extra.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
+  "arn:aws:iam::{{ops_account}}:policy/masters.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
+  "arn:aws:iam::{{ops_account}}:policy/masters_extra.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
 ]
 
 # List of existing IAM policies that will be attached to instance profile for
@@ -233,8 +233,8 @@ k8s_masters_iam_policies_arns = [
 # ]
 
 k8s_nodes_iam_policies_arns = [
-  "arn:aws:iam::{{operations_aws_account_number}}:policy/nodes.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
-  "arn:aws:iam::{{operations_aws_account_number}}:policy/KENTRIKOS_{{region}}.{{product_domain_name}}-{{environment_type}}_AssumeCrossAccount",
+  "arn:aws:iam::{{ops_account}}:policy/nodes.{{region}}-{{product_domain_name}}-{{environment_type}}-ops.k8s.local",
+  "arn:aws:iam::{{ops_account}}:policy/KENTRIKOS_{{region}}.{{product_domain_name}}-{{environment_type}}_AssumeCrossAccount",
 ]
 
 # IMPORTANT NOTE: The list of (private) subnets must match the param "azs" from
