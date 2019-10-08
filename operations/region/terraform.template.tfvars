@@ -123,7 +123,7 @@ region = "{{region}}"
 
 azs = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
 
-vpc_id = "{{operations_vpc_ic}}"
+vpc_id = "{{operations_vpc_id}}"
 
 # Proxy settings to use for Internet access. Enter the proxy address (FQDN or IP
 # incl.  # authentication information if needed, without http(s):// prefix)
