@@ -28,7 +28,7 @@ operations_aws_account_number = "{{ops_account}}"
 # and Kubernetes. Example:
 # auto_IAM_mode = true
 
-auto_IAM_mode = false
+auto_IAM_mode = true
 
 # IAM path for all policies automatically created by this terraform deployment.
 # IAM path must start and end with "/". Examples:
