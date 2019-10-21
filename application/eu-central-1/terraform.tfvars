@@ -341,3 +341,6 @@ ingress_helm_values = {
 }
 
 ingress_service_type = "LoadBalancer"
+
+# Awaliable options ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+k8s_cluster_enabled_log_types = []

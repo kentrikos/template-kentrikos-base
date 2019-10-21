@@ -1,5 +1,5 @@
 module "operations" {
-  source = "github.com/kentrikos/terraform-aws-account-operations?ref=ingress_upgrade"
+  source = "github.com/kentrikos/terraform-aws-account-operations?ref=2.0.0"
 
   product_domain_name = var.product_domain_name
   environment_type    = var.environment_type
@@ -23,6 +23,7 @@ module "operations" {
   k8s_protect_cluster_from_scale_in = var.k8s_protect_cluster_from_scale_in
   k8s_install_helm                  = var.k8s_install_helm
   k8s_allowed_worker_ssh_cidrs      = var.k8s_allowed_worker_ssh_cidrs
+  k8s_allowed_worker_nodeport_cidrs = var.k8s_allowed_worker_nodeport_cidrs
 
   k8s_masters_iam_policies_arns = var.k8s_masters_iam_policies_arns
   k8s_nodes_iam_policies_arns   = var.k8s_nodes_iam_policies_arns
@@ -31,6 +32,10 @@ module "operations" {
   map_users    = var.k8s_map_users
   map_accounts = var.k8s_map_accounts
 
-  k8s_cluster_version = var.k8s_cluster_version
+  ingress_helm_values  = var.ingress_helm_values
+  ingress_service_type = var.ingress_service_type
+
+  k8s_cluster_version           = var.k8s_cluster_version
+  k8s_cluster_enabled_log_types = var.k8s_cluster_enabled_log_types
 }
 

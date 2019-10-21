@@ -98,3 +98,7 @@ variable "k8s_cluster_version" {
 variable "ingress_helm_values" {}
 
 variable "ingress_service_type" {}
+
+variable "k8s_cluster_enabled_log_types" {
+  type = list(string)
+}

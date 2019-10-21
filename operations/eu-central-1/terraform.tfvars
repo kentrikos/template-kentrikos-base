@@ -400,7 +400,7 @@ dns_domain_hosted_zone_ID = ""
 
 # Hostname for vpces endpoint
 # Example:
-# endpoint_dns_hostname       = "exampleapp"
+# endpoint_dns_hostname       = "*.app"
 endpoint_dns_hostname = ""
 
 # List of security group ids to be attached to endpoint
@@ -415,3 +415,6 @@ endpoint_security_group_ids = []
 # Example:
 # endpoint_private_subnets = ["subnet-abcd1234", "subnet-defg5678", "subnet-hijk0912"]
 endpoint_private_subnets = []
+
+# Awaliable options ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+k8s_cluster_enabled_log_types = []

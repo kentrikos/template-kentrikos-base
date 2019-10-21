@@ -4,14 +4,17 @@ set -o nounset
 set -o pipefail
 set -o xtrace
 ## declare an array variable
-declare -a arr=("operations/eu-central-1/env-eks"
+declare -a arr=(\
+  "operations/eu-central-1/env-eks"
   "operations/eu-central-1/iam"
   "operations/eu-central-1/jenkins-core-infra"
   "operations/eu-central-1/logging"
+  "operations/eu-central-1/vpc-endpoint-to-vpces"
   "application/eu-central-1/env-eks"
   "application/eu-central-1/iam/auto"
   "application/eu-central-1/iam/manual"
   "application/eu-central-1/vpc_endpoint_service_k8s"
+  "application/eu-central-1/vpc_endpoint_service_to_ingress"
   "application/eu-central-1/logging"
 )
 

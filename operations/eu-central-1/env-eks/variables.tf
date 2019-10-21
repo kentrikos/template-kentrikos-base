@@ -69,10 +69,13 @@ variable "k8s_allowed_worker_ssh_cidrs" {
   type = list(string)
 }
 
-variable "k8s_map_accounts" {
+variable "k8s_allowed_worker_nodeport_cidrs" {
   type = list(string)
 }
 
+variable "k8s_map_accounts" {
+  type = list(string)
+}
 
 variable "k8s_map_roles" {
   type = list(object({
@@ -91,4 +94,12 @@ variable "k8s_map_users" {
 }
 
 variable "k8s_cluster_version" {
+}
+
+variable "ingress_helm_values" {}
+
+variable "ingress_service_type" {}
+
+variable "k8s_cluster_enabled_log_types" {
+  type = list(string)
 }

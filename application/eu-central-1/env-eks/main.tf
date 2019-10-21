@@ -1,5 +1,5 @@
 module "application" {
-  source = "github.com/kentrikos/terraform-aws-account-application?ref=ingress_upgrade"
+  source = "github.com/kentrikos/terraform-aws-account-application?ref=2.0.0"
 
   product_domain_name = var.product_domain_name
   environment_type    = var.environment_type
