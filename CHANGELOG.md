@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2019-10-22
+### Changed
+- Bump application account module to 2.0.0
+- Bump operations account module to 2.0.0
+- Bump jenkins module to 1.1.0
+- Updated aws providers to latest 2.33.0
+
+### Added
+- Module for VPCES and Endpoint to VPCES
+
+### BC
+- Variable type changed for `k8s_map_users` and `k8s_map_roles` to align with upstream eks module
+
 ## [1.0.0] - 2019-08-07
 ### Changed
 - Required terraform version updated to `>= 0.12`
