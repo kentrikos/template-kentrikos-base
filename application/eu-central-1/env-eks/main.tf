@@ -1,5 +1,5 @@
 module "application" {
-  source = "github.com/kentrikos/terraform-aws-account-application?ref=1.0.0"
+  source = "github.com/kentrikos/terraform-aws-account-application?ref=2.0.0"
 
   product_domain_name = var.product_domain_name
   environment_type    = var.environment_type
@@ -33,4 +33,6 @@ module "application" {
 
   k8s_cluster_version = var.k8s_cluster_version
 
+  ingress_helm_values  = var.ingress_helm_values
+  ingress_service_type = var.ingress_service_type
 }
