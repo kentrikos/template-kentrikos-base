@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-10-31
+### Changed
+- Bump jenkins module to 1.1.1
+
 ## [2.0.0] - 2019-10-22
 ### Changed
 - Bump application account module to 2.0.0
