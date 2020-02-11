@@ -310,24 +310,24 @@ k8s_map_roles = []
 
 # Additional IAM users to add to the aws-auth configmap. See terraform-aws-modules-eksexamples/basic/variables.tf for example format.
 # Example:
-# k8s_map_users = [
-#  {
-#    user_arn = "arn:aws:iam::66666666666:user/user1"
-#    username = "user1"
-#    group    = "system:masters"
-#  },
-#  {
-#    user_arn = "arn:aws:iam::66666666666:user/user2"
-#    username = "user2"
-#    group    = "system:masters"
-#  },
-#]
+#  k8s_map_users = [
+#   {
+#     userarn  = "arn:aws:iam::66666666666:user/user1"
+#     username = "user1"
+#     groups   = ["system:masters"]
+#   },
+#   {
+#     userarn  = "arn:aws:iam::66666666666:user/user2"
+#     username = "user2"
+#     groups   = ["system:masters"]
+#   },
+# ]
 k8s_map_users = []
 
 # Kubernetes version to use for the EKS cluster.
 # Example:
-# k8s_cluster_version = "1.13"
-k8s_cluster_version = "1.13"
+# k8s_cluster_version = "1.14"
+k8s_cluster_version = "1.14"
 
 
 ingress_helm_values = {
@@ -344,3 +344,46 @@ ingress_service_type = "LoadBalancer"
 
 # Awaliable options ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 k8s_cluster_enabled_log_types = []
+
+# Defaults variables for all manage node groups
+# `node_groups_defaults` is a map with values which will be used if not specified in individual node groups.
+# node_groups_defaults = {
+#   ami_type         = "AL2_x86_64"
+#   disk_size        = "100"
+#   key_name         = var.k8s_aws_ssh_keypair_name
+#   desired_capacity = "1"
+#   max_capacity     = "10"
+#   min_capacity     = "1"
+#   instance_type    = "t3.small"
+#   subnets          = var.k8s_private_subnets
+#   version          = var.k8s_cluster_version
+# }
+
+# Node groups setup
+# Example
+# node_groups = {
+#  example_group_1 = {
+    # desired_capacity = 1
+    # max_capacity     = 10
+    # min_capacity     = 1
+    # disk_size        = "50"
+    # instance_type = "m4.large"
+#  }
+# }
+
+# For multiple groups 
+# node_groups = {
+#   example_group_1 = {
+#     desired_capacity = 1
+#     max_capacity     = 10
+#     min_capacity     = 1
+
+#     instance_type = "m3.large"
+#   },
+#   example_group_2 = {
+#       desired_capacity = 1
+#       max_capacity     = 4
+#       min_capacity     = 1
+#       instance_type = "m4.large"
+#   }
+# }
