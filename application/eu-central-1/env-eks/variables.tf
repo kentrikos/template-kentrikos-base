@@ -102,3 +102,12 @@ variable "ingress_service_type" {}
 variable "k8s_cluster_enabled_log_types" {
   type = list(string)
 }
+
+variable "node_groups_defaults" {
+  type        = any
+  default     = {}
+}
+variable "node_groups" {
+  type        = any
+  default     = {}
+}
