@@ -416,5 +416,23 @@ endpoint_security_group_ids = []
 # endpoint_private_subnets = ["subnet-abcd1234", "subnet-defg5678", "subnet-hijk0912"]
 endpoint_private_subnets = []
 
-# Awaliable options ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+# Avaliable options ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 k8s_cluster_enabled_log_types = []
+
+ingress_helm_values = {
+  "controller.service.targetPorts.http"                                                        = "http"
+  "controller.service.targetPorts.https"                                                       = "https"
+  "controller.service.enableHttps"                                                             = "true"
+  "controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-type"     = "nlb"
+  "controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-internal" = "true"
+  "controller.config.ssl-protocols"                                                            = "TLSv1 TLSv1.1 TLSv1.2"
+  "controller.config.ssl-ciphers"                                                              = "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA"
+}
+
+ingress_service_type = "LoadBalancer"
+
+# List of CIDR ranges that will be allowed for connection between cluster control plane and worker nodes instances.
+# Example:
+# k8s_allowed_worker_nodeport_cidrs = ["10.0.0.0/8"]
+
+k8s_allowed_worker_nodeport_cidrs = []
